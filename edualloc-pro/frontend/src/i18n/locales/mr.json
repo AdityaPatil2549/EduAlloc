@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "dashboard": "डॅशबोर्ड",
+    "deploy": "तैनाती",
+    "briefing": "साप्ताहिक अहवाल",
+    "beo": "BEO दृश्य"
+  },
+  "di": {
+    "title": "वंचितता निर्देशांक",
+    "critical": "गंभीर",
+    "high": "उच्च",
+    "moderate": "मध्यम",
+    "stable": "स्थिर",
+    "stale_warning": "UDISE डेटा १२-१८ महिने जुना असू शकतो"
+  },
+  "dvs": {
+    "title": "तैनाती मूल्य गुण",
+    "di_weight": "समानता (DI)",
+    "match_weight": "विषय जुळणी",
+    "retention_weight": "टिकाव"
+  },
+  "school": {
+    "enrollment": "नोंदणी",
+    "teachers": "शिक्षक",
+    "vacancies": "रिक्त जागा",
+    "toilet": "शौचालय",
+    "electricity": "वीज",
+    "distance": "शहरी अंतर",
+    "ptr": "विद्यार्थी-शिक्षक प्रमाण",
+    "rte_compliant": "RTE अनुपालन",
+    "rte_non_compliant": "RTE अनुपालन नाही"
+  },
+  "deploy": {
+    "top_matches": "शीर्ष शिक्षक जुळणी",
+    "optimize": "जिल्हा ऑप्टिमायझर चालवा",
+    "optimizing": "ऑप्टिमाइज करत आहे...",
+    "approve": "मंजूर करा",
+    "reject": "नाकारा",
+    "distance_km": "{{km}} किमी दूर"
+  },
+  "briefing": {
+    "title": "साप्ताहिक जिल्हा अहवाल",
+    "generated": "AI-निर्मित अहवाल",
+    "download_pdf": "तैनाती आदेश PDF डाउनलोड करा",
+    "priority_schools": "प्राधान्य शाळा"
+  },
+  "common": {
+    "loading": "लोड होत आहे...",
+    "error": "काहीतरी चूक झाली",
+    "retry": "पुन्हा प्रयत्न करा",
+    "no_data": "डेटा उपलब्ध नाही",
+    "language_toggle": "English"
+  }
+}

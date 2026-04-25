@@ -1,0 +1,46 @@
+# ── Secrets — NEVER commit these ────────────────────────────────
+.env
+.env.local
+.env.production
+*.env
+**/.env
+**/secrets/
+service-account*.json
+*-key.json
+
+# ── Python ───────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# ── Node / Frontend ──────────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ── IDEs ─────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ───────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Data (large files) ───────────────────────────────────────────
+backend/data/sample/*.csv
+!backend/data/sample/udise_nandurbar.csv
+!backend/data/sample/teachers_synth.csv

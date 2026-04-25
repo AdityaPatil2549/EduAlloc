@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "deploy": "Deploy",
+    "briefing": "Briefing",
+    "beo": "BEO View"
+  },
+  "di": {
+    "title": "Deprivation Index",
+    "critical": "Critical",
+    "high": "High",
+    "moderate": "Moderate",
+    "stable": "Stable",
+    "stale_warning": "UDISE data may be 12–18 months old"
+  },
+  "dvs": {
+    "title": "Deployment Value Score",
+    "di_weight": "Equity (DI)",
+    "match_weight": "Subject Fit",
+    "retention_weight": "Retention"
+  },
+  "school": {
+    "enrollment": "Enrollment",
+    "teachers": "Teachers",
+    "vacancies": "Vacancies",
+    "toilet": "Toilet",
+    "electricity": "Electricity",
+    "distance": "Urban Distance",
+    "ptr": "Pupil-Teacher Ratio",
+    "rte_compliant": "RTE Compliant",
+    "rte_non_compliant": "Not RTE Compliant"
+  },
+  "deploy": {
+    "top_matches": "Top Teacher Matches",
+    "optimize": "Run District Optimizer",
+    "optimizing": "Optimizing...",
+    "approve": "Approve",
+    "reject": "Reject",
+    "distance_km": "{{km}} km away"
+  },
+  "briefing": {
+    "title": "Weekly District Briefing",
+    "generated": "AI-generated briefing",
+    "download_pdf": "Download Deployment Order PDF",
+    "priority_schools": "Priority Schools"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Retry",
+    "no_data": "No data available",
+    "language_toggle": "मराठी"
+  }
+}
