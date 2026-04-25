@@ -1,0 +1,54 @@
+# Project Memory: EduAllocPro (Mission Control)
+
+**Mission:** Complete full-stack stabilization and UI implementation of the EduAllocPro intelligence platform for the 2026 Hackathon.
+**District Focus:** Nandurbar, Maharashtra.
+
+---
+
+## 🚀 Accomplishments & Chronology
+
+### Phase 1: Infrastructure & Backend Stabilization
+*   **Module Resolution:** Generated `__init__.py` files across all backend directories to ensure proper Python module discovery.
+*   **Dependency Fix:** Pinning `ortools` to `9.15.6755` (and later loosening to resolve conflicts) to ensure solver stability.
+*   **Data Enrichment:** Implemented `geocode.py` in `backend/data` for batch enrichment of UDISE+ data with Google Maps coordinates.
+*   **Backend Config:** Updated `backend/.env` with `CORS_ORIGINS` for `http://localhost:5177` and configured `WORKERS=1` for the in-memory `EmbeddingsCache`.
+*   **Testing Suite:** Created integration tests in `tests/integration/test_api.py` with mocked BigQuery/Firebase clients.
+
+### Phase 2: "Mission Control" UI Design (Stitch MCP)
+*   **Design Generation:** Used Stitch MCP to generate a high-fidelity "Dark Intelligence" aesthetic (Ink sidebar `#0A0F1E`, White canvas `#faf8ff`, Electric Blue accents `#0040e0`).
+*   **Core Screens Generated:**
+    1.  **District Dashboard:** Map-centric heatmap view.
+    2.  **Deploy Screen:** Priority vacancy queue and DVS-focused match cards.
+    3.  **Briefing Screen:** Document-style intelligence reports.
+
+### Phase 3: Global UI Migration (React Implementation)
+*   **Typography:** Integrated `Inter` (UI) and `JetBrains Mono` (Data) via Google Fonts in `index.html`.
+*   **Styling System:**
+    *   Updated `index.css` with semantic Mission Control tokens (`--primary`, `--inverse-surface`, etc.).
+    *   Fixed CSS `@import` order issue (Tailwind/PostCSS requirement).
+*   **App Layout:** Refactored `App.jsx` with a persistent Dark Intelligence top navigation and layout wrappers.
+*   **Dashboard Overhaul:** Migrated `Dashboard.jsx` to a 320px dark sidebar layout with high-density `SchoolCard` components.
+*   **Deploy Overhaul:** Implemented a split-view in `Deploy.jsx` for managing the vacancy queue and viewing `TeacherMatchCard` results.
+*   **Briefing Implementation:** Built `Briefing.jsx` as a professional document-style report view for Gemini AI briefings.
+
+### Phase 4: Git & Deployment Readiness
+*   **Git Init:** Initialized Git repository at project root.
+*   **Security:** Created `.gitignore` to prevent sensitive files (`.env`, secrets, `node_modules`) from being pushed.
+*   **GitHub Sync:** Pushed the entire stabilized codebase to [https://github.com/AdityaPatil2549/EduAlloc.git](https://github.com/AdityaPatil2549/EduAlloc.git).
+
+---
+
+## 🛠 Fixes & Adjustments
+- **[CSS]** Moved Google Fonts `@import` to the top of `index.css` to fix Vite build errors.
+- **[Dependencies]** Loosened version pins for `google-cloud-aiplatform`, `google-generativeai`, and `ortools` to resolve a critical `protobuf` version conflict.
+- **[UI]** Restyled `DIBadge` and `TeacherMatchCard` to use "Precision" radius (10px) and JetBrains Mono for all numeric metrics.
+
+---
+
+## 🎯 Current Objectives
+- [ ] **Data Ingestion:** Populate BigQuery with actual Nandurbar UDISE+ school and teacher data.
+- [ ] **Service Execution:** Run FastAPI backend and verify real-time data flow to the "Mission Control" frontend.
+- [ ] **Automation:** Finalize the deployment pipeline for Cloud Run/Vercel.
+
+---
+*Last updated: 2026-04-25*
