@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `edualloc_dataset.schools` (
     updated_at              TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
 )
 PARTITION BY DATE(created_at)
-CLUSTER BY district_code, di_score
+CLUSTER BY district_code, di_category
 OPTIONS (description = 'UDISE+ school data with computed Deprivation Index scores');
 
 -- ── teachers ─────────────────────────────────────────────────────────────────

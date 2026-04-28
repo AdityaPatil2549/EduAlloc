@@ -55,13 +55,36 @@ def ingest_udise_csv(csv_path: str, project_id: str, dataset: str) -> None:
                 "di_category": None,
             })
 
-    errors = client.insert_rows_json(client.get_table(table_ref), rows)
-    if errors:
-        bound_log.error("ingest.bq_errors", errors=errors)
+    import json as _json
+    import tempfile
+
+    # Use load jobs (free tier) instead of streaming inserts (requires billing)
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".ndjson", delete=False, encoding="utf-8") as tmp:
+        for row in rows:
+            # Remove None values so BQ doesn't complain about null types
+            clean = {k: v for k, v in row.items() if v is not None}
+            tmp.write(_json.dumps(clean) + "\n")
+        tmp_path = tmp.name
+
+    job_config = bigquery.LoadJobConfig(
+        source_format=bigquery.SourceFormat.NEWLINE_DELIMITED_JSON,
+        write_disposition=bigquery.WriteDisposition.WRITE_APPEND,
+        autodetect=False,
+    )
+
+    table_obj = client.get_table(table_ref)
+    with open(tmp_path, "rb") as src:
+        load_job = client.load_table_from_file(src, table_obj, job_config=job_config)
+
+    load_job.result()  # Wait for completion
+    os.unlink(tmp_path)
+
+    if load_job.errors:
+        bound_log.error("ingest.bq_errors", errors=load_job.errors)
         sys.exit(1)
 
     bound_log.info("ingest.done", count=len(rows))
-    print(f"✅ Ingested {len(rows)} schools into {table_ref}")
+    print(f"[OK] Ingested {len(rows)} schools into {table_ref}")
 
 
 if __name__ == "__main__":

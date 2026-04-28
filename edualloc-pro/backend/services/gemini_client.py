@@ -1,5 +1,5 @@
 """
-Gemini API client — gemini-1.5-pro with JSON schema enforcement.
+Gemini API client — uses google-genai SDK (new, compatible with protobuf 6+).
 
 NEVER use flash for government briefings — quality matters.
 ALWAYS validate Gemini output against schema before returning.
@@ -14,8 +14,8 @@ from concurrent.futures import ThreadPoolExecutor
 from typing import Any
 
 import structlog
-import google.generativeai as genai
-from google.generativeai.types import GenerationConfig
+from google import genai
+from google.genai import types as genai_types
 
 from models.errors import GeminiError, GeminiParseError
 
@@ -28,11 +28,11 @@ class GeminiClient:
     def __init__(
         self,
         api_key: str,
-        model: str = "gemini-1.5-pro",
+        model: str = "gemini-1.5-pro-latest",
         temperature_briefing: float = 0.3,
         temperature_order: float = 0.6,
     ) -> None:
-        genai.configure(api_key=api_key)
+        self._client = genai.Client(api_key=api_key)
         self._model_name = model
         self._temp_briefing = temperature_briefing
         self._temp_order = temperature_order
@@ -62,15 +62,18 @@ class GeminiClient:
         bound_log = log.bind(fn="gemini.generate_json", model=self._model_name, temp=temperature)
         bound_log.info("gemini.generate.start")
 
-        config = GenerationConfig(
+        config = genai_types.GenerateContentConfig(
             temperature=temperature,
             max_output_tokens=2048,
             response_mime_type="application/json",
         )
 
         def _call():
-            model = genai.GenerativeModel(self._model_name)
-            response = model.generate_content(prompt, generation_config=config)
+            response = self._client.models.generate_content(
+                model=self._model_name,
+                contents=prompt,
+                config=config,
+            )
             return response.text
 
         try:

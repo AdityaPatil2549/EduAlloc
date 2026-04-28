@@ -74,8 +74,27 @@ async def generate_order(
     bound_log = log.bind(fn="briefing.order", district=district_id, deployment=deployment_id)
     bound_log.info("order.start")
 
-    # Get assignments for this deployment
-    assignments = []  # TODO: fetch from deployments table
+    # Mock assignments for Hackathon PDF generation
+    assignments = [
+        {
+            "teacher_name": "Rajesh Patil",
+            "subject": "MATH",
+            "school_name": "ZP Primary School Akrani No 2",
+            "distance_km": 12.4
+        },
+        {
+            "teacher_name": "Sunita Deshmukh",
+            "subject": "SCI",
+            "school_name": "ZP Primary School Bambavade",
+            "distance_km": 8.1
+        },
+        {
+            "teacher_name": "Anil Kadam",
+            "subject": "LANG",
+            "school_name": "ZP Primary School Dhadgaon",
+            "distance_km": 24.5
+        }
+    ]
 
     narrative = await gemini_ai.generate_deployment_order(
         district_name="Nandurbar",

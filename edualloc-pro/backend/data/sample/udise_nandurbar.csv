@@ -1,0 +1,31 @@
+school_id,school_name,block_name,village_name,district_code,school_category,medium_of_instruction,management,total_enrollment,prev_year_enrollment,total_teachers,subject_vacancies,subject_vacancy_list,has_toilet,has_electricity,total_classrooms,total_classes,urban_distance_km,aser_proxy_score,udise_year
+27310100101,Zilla Parishad Primary School Nandurbar No 1,Nandurbar,Nandurbar,NDB01,PRIMARY,Marathi,ZP,210,198,6,2,"[""MATH"",""SCI""]",true,true,6,5,2.1,62.5,2022-23
+27310100102,Zilla Parishad Primary School Nandurbar No 2,Nandurbar,Nandurbar,NDB01,PRIMARY,Marathi,ZP,145,160,4,3,"[""MATH"",""ENG"",""HIN""]",true,false,4,5,3.4,48.2,2022-23
+27310100103,Upper Primary School Nandurbar,Nandurbar,Nandurbar,NDB01,UPPER_PRIMARY,Semi-English,ZP,320,298,9,1,"[""SCI""]",true,true,8,8,1.8,71.0,2022-23
+27310100201,ZP Primary School Prakasha,Nandurbar,Prakasha,NDB01,PRIMARY,Marathi,ZP,88,95,2,4,"[""MATH"",""SCI"",""ENG"",""HIN""]",false,false,3,5,18.5,31.2,2022-23
+27310100202,ZP Upper Primary Prakasha,Nandurbar,Prakasha,NDB01,UPPER_PRIMARY,Marathi,ZP,175,162,5,2,"[""PHY"",""CHM""]",true,true,5,8,19.2,54.8,2022-23
+27310200101,ZP Primary School Taloda No 1,Taloda,Taloda,NDB01,PRIMARY,Marathi,ZP,192,185,5,2,"[""MATH"",""MAR""]",true,true,5,5,0.8,58.3,2022-23
+27310200102,ZP Primary School Taloda No 2,Taloda,Taloda,NDB01,PRIMARY,Marathi,ZP,67,72,2,3,"[""MATH"",""SCI"",""ENG""]",false,true,3,5,1.2,42.1,2022-23
+27310200201,ZP Primary School Bambavade,Taloda,Bambavade,NDB01,PRIMARY,Marathi,ZP,54,61,1,4,"[""MATH"",""SCI"",""ENG"",""HIN""]",false,false,2,5,28.3,22.4,2022-23
+27310200202,ZP Upper Primary Bambavade,Taloda,Bambavade,NDB01,UPPER_PRIMARY,Marathi,ZP,112,118,3,3,"[""PHY"",""BIO"",""SST""]",true,false,4,8,29.1,35.6,2022-23
+27310300101,ZP Primary School Shahada No 1,Shahada,Shahada,NDB01,PRIMARY,Marathi,ZP,235,221,7,1,"[""ENG""]",true,true,7,5,1.5,66.2,2022-23
+27310300102,ZP Primary School Shahada No 2,Shahada,Shahada,NDB01,PRIMARY,Marathi,ZP,178,166,5,2,"[""MATH"",""SCI""]",true,true,5,5,2.3,55.9,2022-23
+27310300201,ZP Primary School Dhadgaon,Shahada,Dhadgaon,NDB01,PRIMARY,Marathi,ZP,42,50,1,5,"[""MATH"",""SCI"",""ENG"",""HIN"",""MAR""]",false,false,2,5,45.6,18.7,2022-23
+27310300202,ZP Upper Primary Dhadgaon,Shahada,Dhadgaon,NDB01,UPPER_PRIMARY,Marathi,ZP,98,105,2,4,"[""PHY"",""CHM"",""BIO"",""SST""]",false,false,3,8,46.2,24.3,2022-23
+27310400101,ZP Primary School Akkalkuwa No 1,Akkalkuwa,Akkalkuwa,NDB01,PRIMARY,Marathi,ZP,156,144,4,2,"[""MATH"",""ENG""]",true,true,4,5,3.1,52.7,2022-23
+27310400102,ZP Primary School Akkalkuwa No 2,Akkalkuwa,Akkalkuwa,NDB01,PRIMARY,Marathi,ZP,89,95,3,2,"[""SCI"",""HIN""]",true,false,3,5,4.2,44.8,2022-23
+27310400201,ZP Primary School Molgi,Akkalkuwa,Molgi,NDB01,PRIMARY,Marathi,ZP,38,44,1,4,"[""MATH"",""SCI"",""ENG"",""HIN""]",false,false,2,5,52.3,16.2,2022-23
+27310400202,ZP Upper Primary Molgi,Akkalkuwa,Molgi,NDB01,UPPER_PRIMARY,Marathi,ZP,72,78,2,4,"[""PHY"",""CHM"",""BIO"",""MAR""]",false,false,2,8,53.1,19.8,2022-23
+27310500101,ZP Primary School Akrani No 1,Akrani,Akrani,NDB01,PRIMARY,Marathi,ZP,124,132,3,3,"[""MATH"",""SCI"",""ENG""]",true,false,4,5,62.4,38.5,2022-23
+27310500102,ZP Primary School Akrani No 2,Akrani,Akrani,NDB01,PRIMARY,Marathi,ZP,48,55,1,5,"[""MATH"",""SCI"",""ENG"",""HIN"",""MAR""]",false,false,2,5,64.8,15.3,2022-23
+27310500201,ZP Upper Primary Toranmal,Akrani,Toranmal,NDB01,UPPER_PRIMARY,Marathi,ZP,86,92,2,4,"[""PHY"",""CHM"",""BIO"",""SST""]",false,false,3,8,71.2,21.4,2022-23
+27310600101,ZP Primary School Navapur No 1,Navapur,Navapur,NDB01,PRIMARY,Marathi,ZP,198,188,6,1,"[""MAR""]",true,true,6,5,0.5,64.3,2022-23
+27310600102,ZP Primary School Navapur No 2,Navapur,Navapur,NDB01,PRIMARY,Marathi,ZP,133,125,4,2,"[""MATH"",""ENG""]",true,true,4,5,1.1,57.8,2022-23
+27310600201,ZP Primary School Chinchpada,Navapur,Chinchpada,NDB01,PRIMARY,Marathi,ZP,62,68,2,3,"[""MATH"",""SCI"",""HIN""]",true,false,3,5,22.5,39.6,2022-23
+27310600202,ZP Upper Primary Chinchpada,Navapur,Chinchpada,NDB01,UPPER_PRIMARY,Marathi,ZP,115,122,3,3,"[""PHY"",""BIO"",""SST""]",true,false,4,8,23.1,43.2,2022-23
+27310700101,ZP Primary School Pimpalner,Nandurbar,Pimpalner,NDB01,PRIMARY,Marathi,ZP,145,138,4,2,"[""MATH"",""SCI""]",true,true,4,5,8.6,56.4,2022-23
+27310700201,ZP Primary School Vadali,Nandurbar,Vadali,NDB01,PRIMARY,Marathi,ZP,35,40,1,4,"[""MATH"",""SCI"",""ENG"",""HIN""]",false,false,2,5,33.7,14.8,2022-23
+27310700202,ZP Primary School Kukane,Nandurbar,Kukane,NDB01,PRIMARY,Marathi,ZP,28,32,1,4,"[""MATH"",""SCI"",""ENG"",""MAR""]",false,false,1,5,41.2,12.1,2022-23
+27310800101,ZP Secondary School Nandurbar,Nandurbar,Nandurbar,NDB01,SECONDARY,Semi-English,ZP,412,388,11,2,"[""PHY"",""CHM""]",true,true,12,10,1.0,74.5,2022-23
+27310800201,ZP Secondary School Shahada,Shahada,Shahada,NDB01,SECONDARY,Semi-English,ZP,285,271,8,3,"[""PHY"",""CHM"",""BIO""]",true,true,9,10,2.5,68.2,2022-23
+27310800301,ZP Secondary School Taloda,Taloda,Taloda,NDB01,SECONDARY,Semi-English,ZP,198,186,6,3,"[""MATH"",""PHY"",""CHM""]",true,false,7,10,1.8,59.7,2022-23

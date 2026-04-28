@@ -57,23 +57,45 @@ def generate_teachers(n: int = 300) -> list[dict]:
 
 
 def save_to_csv(teachers: list[dict], path: str) -> None:
-    os.makedirs(os.path.dirname(path), exist_ok=True)
+    parent = os.path.dirname(path)
+    if parent:
+        os.makedirs(parent, exist_ok=True)
     with open(path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=teachers[0].keys())
         writer.writeheader()
         writer.writerows(teachers)
-    print(f"✅ Generated {len(teachers)} synthetic teachers → {path}")
+    print(f"[OK] Generated {len(teachers)} synthetic teachers -> {path}")
 
 
 def ingest_to_bq(teachers: list[dict], project_id: str, dataset: str) -> None:
+    import json as _json
+    import tempfile
     from google.cloud import bigquery
     client = bigquery.Client(project=project_id)
     table_ref = f"{project_id}.{dataset}.teachers"
-    errors = client.insert_rows_json(client.get_table(table_ref), teachers)
-    if errors:
-        print(f"❌ BQ errors: {errors}")
+
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".ndjson", delete=False, encoding="utf-8") as tmp:
+        for t in teachers:
+            clean = {k: v for k, v in t.items() if v is not None}
+            tmp.write(_json.dumps(clean) + "\n")
+        tmp_path = tmp.name
+
+    job_config = bigquery.LoadJobConfig(
+        source_format=bigquery.SourceFormat.NEWLINE_DELIMITED_JSON,
+        write_disposition=bigquery.WriteDisposition.WRITE_APPEND,
+        autodetect=False,
+    )
+    table_obj = client.get_table(table_ref)
+    with open(tmp_path, "rb") as src:
+        load_job = client.load_table_from_file(src, table_obj, job_config=job_config)
+    load_job.result()
+    import os as _os
+    _os.unlink(tmp_path)
+
+    if load_job.errors:
+        print(f"[ERROR] BQ errors: {load_job.errors}")
     else:
-        print(f"✅ Ingested {len(teachers)} teachers into {table_ref}")
+        print(f"[OK] Ingested {len(teachers)} teachers into {table_ref}")
 
 
 if __name__ == "__main__":

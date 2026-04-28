@@ -44,7 +44,7 @@ async def lifespan(app: FastAPI):
     bq_location = os.getenv("BQ_LOCATION", "us-central1")
     vertex_location = os.getenv("VERTEX_AI_LOCATION", "us-central1")
     gemini_key = os.environ["GOOGLE_API_KEY"]
-    maps_key = os.environ["MAPS_API_KEY"]
+    gemini_model = os.getenv("GEMINI_MODEL", "gemini-1.5-pro-latest")
     cache_ttl = float(os.getenv("EMBEDDINGS_CACHE_TTL_HOURS", "24"))
     cache_max = int(os.getenv("EMBEDDINGS_CACHE_MAX_SIZE", "10000"))
 
@@ -57,13 +57,11 @@ async def lifespan(app: FastAPI):
     app.state.vertex = VertexClient(project_id, vertex_location)
     app.state.gemini = GeminiClient(
         api_key=gemini_key,
+        model=gemini_model,
         temperature_briefing=float(os.getenv("GEMINI_TEMPERATURE_BRIEFING", "0.3")),
         temperature_order=float(os.getenv("GEMINI_TEMPERATURE_ORDER", "0.6")),
     )
-    app.state.maps = MapsClient(
-        api_key=maps_key,
-        max_commute_km=float(os.getenv("MAPS_MAX_COMMUTE_KM", "80")),
-    )
+    app.state.maps = MapsClient()
     app.state.embed_cache = EmbeddingsCache(
         max_size=cache_max, ttl_hours=cache_ttl
     )

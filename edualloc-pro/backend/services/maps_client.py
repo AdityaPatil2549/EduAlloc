@@ -1,92 +1,81 @@
-"""Google Maps Distance Matrix + Geocoding client."""
-
-from __future__ import annotations
+"""OpenRouteService Distance Matrix client."""
 
 import asyncio
+import os
 from concurrent.futures import ThreadPoolExecutor
 from typing import Any
 
-import httpx
+import openrouteservice
 import structlog
 
 from models.errors import MapsError
 
 log = structlog.get_logger()
 
-GEOCODING_URL = "https://maps.googleapis.com/maps/api/geocode/json"
-DISTANCE_MATRIX_URL = "https://maps.googleapis.com/maps/api/distancematrix/json"
-
 
 class MapsClient:
-    """Async Google Maps client for distance matrix and geocoding."""
+    """Async OpenRouteService client for distance matrix."""
 
-    def __init__(self, api_key: str, mode: str = "driving", max_commute_km: float = 80.0) -> None:
-        self._key = api_key
-        self._mode = mode
-        self.max_commute_km = max_commute_km
+    def __init__(self) -> None:
+        self._key = os.environ.get("ORS_API_KEY")
+        self._client = openrouteservice.Client(key=self._key) if self._key else None
         self._pool = ThreadPoolExecutor(max_workers=2, thread_name_prefix="maps")
-        log.info("maps.client.init", mode=mode, max_commute_km=max_commute_km)
+        log.info("maps.client.init", provider="openrouteservice")
 
-    async def get_distance_km(self, origin_latlon: tuple, dest_latlon: tuple) -> float:
-        """
-        Get driving distance in km between two lat/lng points.
-        Returns float distance, or raises MapsError.
-        """
-        origin = f"{origin_latlon[0]},{origin_latlon[1]}"
-        destination = f"{dest_latlon[0]},{dest_latlon[1]}"
+    async def distance_matrix(
+        self,
+        origins: list[tuple[float, float]],  # [(lat, lng), ...]
+        destination: tuple[float, float],
+    ) -> tuple[list[float], list[float]]:
+        """Returns lists of (distances in km, durations in min) for each origin to destination."""
+        if not origins:
+            return [], []
 
-        bound_log = log.bind(fn="maps.distance", origin=origin, dest=destination)
+        bound_log = log.bind(fn="distance_matrix", origins=len(origins))
+        
+        if not self._client:
+            bound_log.warning("maps.client.mocking_due_to_missing_key")
+            # Mock distances if no key is provided (e.g. hackathon demo safety)
+            return [0.0 for _ in origins], [0.0 for _ in origins]
+
         bound_log.info("maps.distance.start")
 
+        # ORS uses [lng, lat] order (GeoJSON)
+        coords = [[lng, lat] for lat, lng in origins]
+        coords.append([destination[1], destination[0]])  # dest last
+
+        def _call():
+            result = self._client.distance_matrix(
+                locations=coords,
+                profile="driving-car",
+                metrics=["distance", "duration"],
+                units="km",
+            )
+            # Result: distances[origin_idx][dest_idx]
+            dest_idx = len(origins)  # destination is last location
+            
+            distances_km = []
+            durations_min = []
+            
+            for i in range(len(origins)):
+                dist = result["distances"][i][dest_idx]
+                dur = result["durations"][i][dest_idx]
+                # Handle cases where route not found (could be None)
+                if dist is None:
+                    distances_km.append(81.0) # Penalty distance (over 80km constraint)
+                    durations_min.append(120.0)
+                else:
+                    distances_km.append(float(dist))
+                    durations_min.append(float(dur) / 60.0)
+            return distances_km, durations_min
+
         try:
-            async with httpx.AsyncClient(timeout=10) as client:
-                resp = await client.get(
-                    DISTANCE_MATRIX_URL,
-                    params={
-                        "origins": origin,
-                        "destinations": destination,
-                        "mode": self._mode,
-                        "key": self._key,
-                    },
-                )
-                data = resp.json()
-
-            element = data["rows"][0]["elements"][0]
-            if element["status"] != "OK":
-                raise MapsError(f"Distance Matrix status: {element['status']}")
-
-            distance_m = element["distance"]["value"]
-            distance_km = distance_m / 1000.0
-            bound_log.info("maps.distance.done", km=distance_km)
-            return distance_km
-        except MapsError:
-            raise
+            loop = asyncio.get_event_loop()
+            distances_km, durations_min = await loop.run_in_executor(
+                self._pool, _call
+            )
+            bound_log.info("maps.distance.done", count=len(distances_km))
+            return distances_km, durations_min
         except Exception as e:
             bound_log.error("maps.distance.error", error=str(e))
             raise MapsError(f"Distance Matrix failed: {e}")
-
-    async def geocode(self, address: str) -> tuple[float, float] | None:
-        """
-        Geocode an address string. Returns (lat, lng) or None if not found.
-        """
-        bound_log = log.bind(fn="maps.geocode", address=address[:60])
-        bound_log.info("maps.geocode.start")
-
-        try:
-            async with httpx.AsyncClient(timeout=10) as client:
-                resp = await client.get(
-                    GEOCODING_URL,
-                    params={"address": address, "key": self._key},
-                )
-                data = resp.json()
-
-            if data["status"] == "ZERO_RESULTS" or not data.get("results"):
-                bound_log.warning("maps.geocode.no_result")
-                return None
-
-            loc = data["results"][0]["geometry"]["location"]
-            bound_log.info("maps.geocode.done", lat=loc["lat"], lng=loc["lng"])
-            return loc["lat"], loc["lng"]
-        except Exception as e:
-            bound_log.error("maps.geocode.error", error=str(e))
-            raise MapsError(f"Geocoding failed: {e}")

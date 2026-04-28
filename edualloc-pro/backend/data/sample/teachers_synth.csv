@@ -1,0 +1,301 @@
+teacher_id,district_code,subject_specialization,qualification,years_service,years_rural,languages,long_dist_consent,current_school_id,is_synthetic,embedding_status,created_at
+8bb48506-f765-4138-8a76-d3b1c5b4f3de,NDB01,"[""SCI"", ""MATH"", ""SST""]",MSc,9,3,"[""mr"", ""hi""]",True,,True,PENDING,2026-04-25T16:19:43.303350
+ae2a54f4-ef2b-488a-9fc2-a36e19ec2e3c,NDB01,"[""BIO"", ""SCI"", ""HIN""]",MSc BEd,14,0,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.303406
+eff81fd1-f952-4371-be45-3a710cdf7b2e,NDB01,"[""MATH"", ""MAR"", ""SST""]",BSc,21,13,"[""mr""]",True,,True,PENDING,2026-04-25T16:19:43.303424
+d95d7a6f-7452-45f4-88a8-21be4c27578d,NDB01,"[""ENG""]",MSc BEd,23,13,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303451
+2377b45c-d580-44b8-ae54-c6da7b7fc563,NDB01,"[""SCI"", ""BIO""]",BA BEd,13,1,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303463
+ff0589fa-c930-4be0-9e6c-51409db36117,NDB01,"[""MATH"", ""CHM""]",MA BEd,18,3,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.303473
+734da4ef-5e4e-4e7e-9d08-667cba382aa6,NDB01,"[""HIN"", ""SST"", ""BIO""]",MSc BEd,7,1,"[""mr""]",True,,True,PENDING,2026-04-25T16:19:43.303484
+824fc35f-95f5-42e9-88f3-ea259db1689c,NDB01,"[""MAR""]",MSc,4,3,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.303494
+83504fd0-f9c7-4562-9c3e-a86149dc4e9b,NDB01,"[""SST""]",MSc,12,3,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.303510
+f1e044dd-8921-407c-85d5-e80e159ee9ca,NDB01,"[""ENG"", ""MAR"", ""SCI""]",MSc,15,12,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303522
+d03f1a2d-d004-40c1-8a77-4dbeba77d29e,NDB01,"[""SST""]",BSc BEd,25,1,"[""mr""]",True,,True,PENDING,2026-04-25T16:19:43.303532
+bf89c270-a649-406a-ab14-68fa36f28327,NDB01,"[""HIN"", ""SCI""]",MA BEd,7,5,"[""mr"", ""hi"", ""gondi""]",True,,True,PENDING,2026-04-25T16:19:43.303543
+1459ecd9-fc30-4538-a7a3-63a1d8fa6920,NDB01,"[""CHM"", ""ENG"", ""BIO""]",BSc,5,1,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.303552
+7095f254-4a4e-4253-894d-f4ae389e7366,NDB01,"[""PHY"", ""BIO"", ""ENG""]",BSc BEd,8,2,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.303562
+c48b04f8-6cf2-4a2b-b839-982286e31e82,NDB01,"[""ENG""]",MA BEd,21,5,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303571
+e0e7354a-dfda-4664-b1a5-808423a2274f,NDB01,"[""PHY""]",BSc,13,9,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.303580
+6475db30-b657-43f2-9068-3fbc9f62f283,NDB01,"[""MATH"", ""SCI"", ""SST""]",BA BEd,18,8,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.303590
+3d52879b-d86c-4e5d-80fd-6dfb49b9bb12,NDB01,"[""PHY"", ""ENG""]",MSc,15,0,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.303600
+d1902fee-b091-4fc6-870c-d6846110377e,NDB01,"[""ENG"", ""SCI"", ""PHY""]",BSc,21,9,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303610
+069a34d1-1a70-4086-b1a5-6f5f51af4440,NDB01,"[""ENG""]",BA BEd D.Ed,12,12,"[""mr"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.303619
+b9e5c59b-6ec8-4891-bd18-2402cd769a19,NDB01,"[""SST""]",BA BEd,16,0,"[""mr""]",True,,True,PENDING,2026-04-25T16:19:43.303628
+e2180c9a-9530-4773-a8db-0c79538528c6,NDB01,"[""MATH""]",MA BEd,8,1,"[""mr"", ""hi""]",True,,True,PENDING,2026-04-25T16:19:43.303637
+3f24275c-245e-4e40-bc0b-64c834c17ee8,NDB01,"[""ENG"", ""BIO"", ""SST""]",BA BEd D.Ed,16,5,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303648
+5140494a-62d3-4b8e-a6a5-28b6d4ec11df,NDB01,"[""MAR"", ""BIO""]",MSc,23,9,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.303656
+70420e33-eda6-49e3-97c3-56a03ab53db5,NDB01,"[""BIO"", ""CHM""]",BA BEd,4,1,"[""mr"", ""hi""]",True,,True,PENDING,2026-04-25T16:19:43.303665
+7bf66029-2bd3-409a-a037-66ef9831f09f,NDB01,"[""BIO"", ""MAR"", ""HIN""]",MSc,8,0,"[""mr"", ""hi""]",True,,True,PENDING,2026-04-25T16:19:43.303673
+41145b5f-e3d8-44ef-84e0-4eb310a4de99,NDB01,"[""SCI""]",MSc BEd,2,1,"[""mr""]",True,,True,PENDING,2026-04-25T16:19:43.303683
+1f0b27ba-03ab-4ac1-b0bd-3281406d184f,NDB01,"[""CHM"", ""MAR"", ""HIN""]",BSc,5,5,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303691
+c6133f58-b1e8-4b9a-b9f7-fcb7429d4f70,NDB01,"[""MAR"", ""CHM""]",MSc,14,3,"[""mr"", ""hi"", ""gondi""]",True,,True,PENDING,2026-04-25T16:19:43.303700
+43bd70bf-fa51-418d-a966-d419658dde02,NDB01,"[""PHY"", ""BIO""]",MSc,15,1,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.303708
+30d0ece1-801e-48f8-a537-02c689d46f83,NDB01,"[""PHY""]",BSc BEd,24,10,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303716
+5bb2b374-7c1f-4e52-b729-86369300993a,NDB01,"[""MAR""]",MSc BEd,18,14,"[""mr""]",True,,True,PENDING,2026-04-25T16:19:43.303724
+d6e32527-e30b-48f9-9a9c-507e9f1746ad,NDB01,"[""MAR"", ""SCI""]",BSc,15,3,"[""mr"", ""hi""]",True,,True,PENDING,2026-04-25T16:19:43.303733
+b3c433d1-af85-4f14-91fc-88c609b19bff,NDB01,"[""MAR""]",MSc BEd,6,3,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.303742
+c92c7aaa-fdf7-43f0-82c8-dbbc7f15d287,NDB01,"[""ENG""]",BA BEd,13,0,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.303750
+f6196132-0adf-4937-9286-cbe1c32d2cef,NDB01,"[""PHY"", ""CHM""]",BSc BEd,5,1,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303759
+ff728786-abcb-4621-97fe-b94dd2b39d83,NDB01,"[""BIO"", ""MATH"", ""SST""]",MA BEd,11,0,"[""mr"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.303768
+026cbe35-f3ff-401b-8de1-8b2146ed9199,NDB01,"[""ENG"", ""MATH"", ""HIN""]",BSc BEd,3,1,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.303777
+0bd68df2-6f92-4e9f-b61c-436484bf73bc,NDB01,"[""SCI"", ""MAR""]",MA BEd,19,1,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303786
+3370b691-ce16-466b-a9c3-cd27befaa7c9,NDB01,"[""BIO"", ""SST"", ""ENG""]",MA BEd,7,5,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.303795
+88912e2b-b496-4061-8094-aa1f67d9618d,NDB01,"[""HIN"", ""CHM"", ""ENG""]",BSc,25,2,"[""mr"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.303804
+552c89a3-fd88-4314-b47a-10026708f435,NDB01,"[""SCI""]",MSc BEd,18,6,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.303812
+e3ccc29e-bfb1-43bc-9dac-5877771f86ad,NDB01,"[""MAR""]",BA BEd D.Ed,12,4,"[""mr"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.303820
+3a542dc5-fb93-481a-939a-ecef0d644e51,NDB01,"[""HIN"", ""MATH"", ""SST""]",BSc BEd,18,9,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303829
+81b2e02a-55cf-4886-a2bc-f43c5ecc5815,NDB01,"[""SCI"", ""BIO""]",BSc,24,4,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303838
+bd73c838-abbb-4ebd-9ebf-c5f995a7ff09,NDB01,"[""SST"", ""MAR"", ""BIO""]",BA BEd,21,8,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.303846
+378944a6-f74b-4561-882d-11211fe277eb,NDB01,"[""PHY""]",BA BEd D.Ed,9,0,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.303855
+63c47669-76fa-4fc5-bc04-65bebc881863,NDB01,"[""HIN"", ""ENG"", ""SST""]",BSc BEd,15,13,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.303863
+1bcd9bd3-2d26-444e-8110-3068b960931e,NDB01,"[""ENG"", ""MATH"", ""PHY""]",MA BEd,12,9,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303873
+68feff82-5297-436a-a0ca-9ad42bce436a,NDB01,"[""HIN""]",BSc BEd,12,12,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.303881
+57839266-680d-48a0-bce2-4ff73ed4b201,NDB01,"[""MAR""]",BSc,22,3,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.303890
+198aab78-95c5-437d-8b64-c571b928d356,NDB01,"[""ENG"", ""MAR"", ""PHY""]",MA BEd,6,6,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.303899
+23a17fb1-d8e9-4027-b629-b1ebb82132a8,NDB01,"[""SST""]",MSc,14,12,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303908
+61ff800c-c09c-46ca-bcc0-b4ab9b580260,NDB01,"[""ENG"", ""SCI""]",MA BEd,13,13,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.303916
+dbd9c7dc-6630-4565-bb95-b08d2d25f199,NDB01,"[""CHM""]",BA BEd D.Ed,12,4,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303924
+7b20c2fc-cb1e-421f-a96b-38146f44056c,NDB01,"[""MATH""]",BA BEd,22,6,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.303933
+938c31f1-2e78-4f31-b3fa-558a8d6c0188,NDB01,"[""SST"", ""PHY""]",BSc BEd,22,10,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.303942
+b4f26efb-e871-4e1b-8932-85d882166bd6,NDB01,"[""HIN""]",BA BEd,2,0,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.303950
+0f1fb6f3-755a-41a1-bad4-39748140e3c2,NDB01,"[""BIO"", ""SCI""]",BSc BEd,13,9,"[""mr"", ""hi"", ""gondi""]",True,,True,PENDING,2026-04-25T16:19:43.303959
+f425c33d-e828-4f7a-8178-fb068b3fb117,NDB01,"[""BIO""]",BSc BEd,18,6,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.303968
+662017ba-9159-463f-88ef-8b6112ee0133,NDB01,"[""SST"", ""SCI"", ""BIO""]",MA BEd,10,8,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.303977
+e0ec4df5-907e-4f64-a9d9-5095507b606f,NDB01,"[""HIN"", ""ENG""]",MA BEd,7,6,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303986
+7f011b13-56a1-4b9d-a5c1-959e665f13cd,NDB01,"[""HIN"", ""PHY"", ""BIO""]",MA BEd,1,1,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.303995
+35506d4f-4875-4bef-881d-0bc7b5949cb2,NDB01,"[""SST"", ""CHM"", ""MAR""]",BA BEd D.Ed,15,6,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304004
+46bac9fd-200c-41f8-bfd7-93fafe0cb0e8,NDB01,"[""SCI"", ""HIN"", ""CHM""]",BA BEd D.Ed,22,10,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.304026
+1c28b90f-2e38-46e6-87f4-bb9b816e03b0,NDB01,"[""HIN"", ""MAR"", ""PHY""]",MSc BEd,7,2,"[""mr"", ""hi"", ""gondi""]",True,,True,PENDING,2026-04-25T16:19:43.304039
+2dd6f88b-26b4-461a-9706-9dfe6ff4fabc,NDB01,"[""SCI"", ""CHM"", ""MAR""]",MA BEd,21,6,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304049
+d45a40fe-64c1-4572-b2d5-9062105da701,NDB01,"[""MAR"", ""ENG""]",BA BEd D.Ed,21,0,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304059
+a1eb4c03-007c-475c-82a0-46a9390ed991,NDB01,"[""MAR"", ""ENG""]",MSc BEd,23,14,"[""mr"", ""hi""]",True,,True,PENDING,2026-04-25T16:19:43.304068
+1db7cf1a-f65c-42d8-8b48-1868e9fe166c,NDB01,"[""ENG"", ""CHM""]",MA BEd,22,10,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304078
+c2a6e535-033e-44b1-a367-eabfd41e14e3,NDB01,"[""BIO"", ""PHY"", ""CHM""]",MSc,18,14,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304088
+730f5ad5-51ae-4d1d-9358-08b08a2e1604,NDB01,"[""HIN"", ""MAR""]",BSc,21,8,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304097
+46c4dcf1-7f09-4742-be03-8b3e8ce06521,NDB01,"[""MAR"", ""HIN"", ""BIO""]",BA BEd,3,2,"[""mr""]",True,,True,PENDING,2026-04-25T16:19:43.304107
+71220be1-49b8-4692-9d77-8a04beb9f3bb,NDB01,"[""SCI"", ""ENG"", ""BIO""]",MSc,8,6,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304119
+595d036d-a530-4d94-a8e2-b8b957b989df,NDB01,"[""PHY""]",MA BEd,14,5,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304128
+1fd75aab-7638-40ed-8f22-a7b37b8de184,NDB01,"[""PHY""]",MSc,13,12,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304137
+4c3ba6ed-d383-48f3-ad12-6e2776ad6891,NDB01,"[""PHY"", ""CHM"", ""MATH""]",BA BEd D.Ed,12,4,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304148
+b27ad576-7f81-4850-abb0-56d6bfaca2d0,NDB01,"[""BIO"", ""MAR"", ""CHM""]",BSc BEd,8,4,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304159
+a50d598c-2d18-49b1-8571-a56b38533d7f,NDB01,"[""PHY"", ""ENG""]",BSc,15,4,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304168
+3d64fb1e-7f03-4068-8250-5f962b95810d,NDB01,"[""MATH"", ""SCI""]",MA BEd,21,13,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.304177
+c9b58644-1323-4831-8ef5-d1f4b6702c5f,NDB01,"[""HIN""]",BA BEd,13,5,"[""mr""]",True,,True,PENDING,2026-04-25T16:19:43.304185
+30fd32a4-1cad-4c5f-8c55-2256d7025500,NDB01,"[""HIN"", ""PHY""]",MSc,9,1,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304194
+fee436d5-4a3b-466d-bcb5-e228356d5d5a,NDB01,"[""SST""]",MSc,8,1,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304202
+e190fcd2-6bd6-4471-a836-62c2e44b3a34,NDB01,"[""MAR""]",MSc BEd,7,0,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304211
+ad98368e-f80a-4aa0-9abc-d326604d9263,NDB01,"[""SCI"", ""MAR""]",MSc BEd,15,8,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304219
+63ea3653-8743-436a-85e9-86d9330d32ce,NDB01,"[""SCI"", ""ENG"", ""CHM""]",BA BEd,4,4,"[""mr"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.304228
+c2e4826b-6b47-4f56-977d-ba5c50582618,NDB01,"[""PHY"", ""BIO"", ""SST""]",BA BEd D.Ed,7,1,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304237
+6b56968d-7035-4e99-a45f-978a94dabf44,NDB01,"[""HIN""]",BSc,22,3,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304245
+1bc666b5-a154-4cae-b2bc-5ce70cb31183,NDB01,"[""BIO"", ""PHY""]",MSc,22,11,"[""mr""]",True,,True,PENDING,2026-04-25T16:19:43.304253
+eb4fdba2-e05f-4c4a-aa6d-818d4fc664fb,NDB01,"[""PHY""]",BA BEd,16,3,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304262
+c325acd7-aa52-4a2e-b1d0-9970a57418d7,NDB01,"[""ENG"", ""PHY"", ""SCI""]",BSc,24,8,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304271
+55efbaba-b532-4dc2-a1df-a412e7e2e19f,NDB01,"[""PHY"", ""HIN""]",BSc BEd,11,3,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.304279
+522e2e61-3d3e-4e64-a67e-113172934014,NDB01,"[""MAR"", ""CHM""]",MA BEd,19,12,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.304288
+30865047-2483-4b6e-a63a-0f374b63ba6e,NDB01,"[""CHM""]",BA BEd,7,5,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.304297
+4118a9fc-0e6a-4e21-b81f-0dc43f3b852f,NDB01,"[""HIN"", ""MATH"", ""BIO""]",MA BEd,7,1,"[""mr"", ""hi"", ""gondi""]",True,,True,PENDING,2026-04-25T16:19:43.304306
+6fd07d77-1ef4-4a90-aef2-89d5b6ffda97,NDB01,"[""MAR"", ""CHM"", ""SST""]",BSc BEd,23,15,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304315
+6e1bfc9d-b87e-4c1d-bd58-a6d6fccc40ad,NDB01,"[""MAR"", ""PHY""]",BSc,23,7,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.304323
+7bc53383-c403-4c09-8804-6bfa840eae84,NDB01,"[""BIO"", ""SST""]",BA BEd,14,11,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304332
+d2b2fbf8-8bda-4d1c-9074-b36d833f68d4,NDB01,"[""HIN"", ""BIO""]",BA BEd,8,1,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304342
+9ab7b430-8e3c-4e3a-be5a-bf8d74df011d,NDB01,"[""BIO"", ""ENG"", ""SCI""]",BSc,7,7,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304351
+110809e8-639e-4779-9209-16c3eb97e3e4,NDB01,"[""HIN"", ""SCI"", ""PHY""]",MSc BEd,7,4,"[""mr""]",True,,True,PENDING,2026-04-25T16:19:43.304360
+f163cc6e-1137-494a-8310-361b82460329,NDB01,"[""BIO""]",BSc BEd,5,2,"[""mr"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.304368
+2017aecc-2028-496d-80b8-865b9c69fd3d,NDB01,"[""ENG"", ""CHM""]",MA BEd,4,0,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304377
+0b706b68-abbc-46d6-8958-3f04a2365544,NDB01,"[""SST"", ""ENG""]",MA BEd,2,1,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304385
+762ba453-39ee-4b7c-bd04-a22f432a4c92,NDB01,"[""PHY""]",MSc,16,2,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304394
+52e1fe4d-479e-45f4-98bd-3ab75bba240c,NDB01,"[""ENG""]",MSc BEd,19,9,"[""mr"", ""hi""]",True,,True,PENDING,2026-04-25T16:19:43.304402
+6fb8d1ac-3e4f-4f6d-8e1d-4ecd96db9d26,NDB01,"[""PHY"", ""MAR"", ""BIO""]",MA BEd,17,12,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.304411
+b71dd3cc-8356-42d3-9e93-b83da1866542,NDB01,"[""PHY"", ""HIN"", ""CHM""]",MSc,20,1,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304419
+2fa82f06-073b-4d47-b72a-5a1faff76496,NDB01,"[""MAR""]",MSc BEd,9,1,"[""mr"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.304428
+782685ab-b6b7-4ce9-84f2-28e5df192810,NDB01,"[""ENG""]",BSc,1,1,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304436
+6b1a6342-63e2-4d82-9836-d0a8ae2e386e,NDB01,"[""MATH"", ""MAR""]",MA BEd,10,4,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304444
+c06fb551-f0ca-43e2-b21a-04869a94869f,NDB01,"[""MAR"", ""HIN"", ""PHY""]",BSc,21,6,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304453
+0e4708ac-3b9d-40b3-844b-69232fa19583,NDB01,"[""ENG"", ""HIN"", ""PHY""]",BA BEd D.Ed,5,0,"[""mr""]",True,,True,PENDING,2026-04-25T16:19:43.304462
+10e62010-9dc1-4aae-9b07-237b8dbb0f45,NDB01,"[""HIN"", ""CHM"", ""MATH""]",BA BEd,15,9,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304471
+13fccfc0-d3ce-410a-bbcc-5cea41d03d23,NDB01,"[""CHM"", ""BIO"", ""MATH""]",MSc,20,1,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.304480
+bd090535-4303-4dec-b175-c6a3365fec6b,NDB01,"[""HIN"", ""MATH"", ""CHM""]",MSc,8,0,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.304488
+1a3f096f-4b61-43c4-9fc6-caf6bfc60bb9,NDB01,"[""MATH"", ""ENG"", ""MAR""]",MSc BEd,17,14,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304497
+6eb0389b-65e4-4c0d-803a-441c163a5535,NDB01,"[""CHM"", ""SCI""]",BA BEd,16,11,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304506
+6781b901-ed27-4173-b486-15248f803b2b,NDB01,"[""SST""]",MSc,14,11,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304514
+41a66428-d738-4ad1-824e-dc61b8ed423b,NDB01,"[""MATH"", ""CHM"", ""BIO""]",BA BEd D.Ed,11,4,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304523
+4db809f0-dde5-4f46-9aa8-889f9ae674e1,NDB01,"[""MATH"", ""CHM"", ""MAR""]",BSc,2,0,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304533
+8384477c-d75f-4df4-8d82-177ce8ea1e2d,NDB01,"[""CHM"", ""MATH"", ""SCI""]",BA BEd,9,8,"[""mr"", ""hi"", ""gondi""]",True,,True,PENDING,2026-04-25T16:19:43.304541
+f26239b5-7fde-4ed8-bc39-bc7deb0dfd07,NDB01,"[""CHM"", ""SCI"", ""MATH""]",BA BEd,21,7,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304550
+ff3cad42-6aa8-442b-9627-27efa8614f20,NDB01,"[""BIO""]",BA BEd D.Ed,14,1,"[""mr"", ""hi""]",True,,True,PENDING,2026-04-25T16:19:43.304558
+57da73be-4c42-40b3-aa94-1aa3b715595b,NDB01,"[""SCI"", ""ENG""]",BA BEd,16,9,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304567
+d85ca10a-6caf-489f-9271-1ae0ca2debda,NDB01,"[""CHM"", ""MAR""]",BSc,15,4,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304576
+65d486c8-ad4c-4c3f-a8fa-9637f8ef9d79,NDB01,"[""ENG"", ""SCI"", ""BIO""]",BA BEd D.Ed,25,13,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304585
+526a5fdd-1c5b-4bf9-aa85-0affb8c6a3bd,NDB01,"[""MATH"", ""HIN""]",BSc,24,9,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304593
+4621c777-231e-4877-a5ea-f6dc487f4f34,NDB01,"[""CHM""]",BSc,18,15,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304602
+9cc94bd2-5838-49a7-98a0-8bfe7e1b3b2e,NDB01,"[""CHM"", ""SST""]",MSc BEd,7,3,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304611
+c589ca19-3257-48bf-9def-bd36e971f301,NDB01,"[""SST""]",BA BEd D.Ed,24,15,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304627
+930b8bba-4eb8-4f75-8dae-86523d7e151d,NDB01,"[""ENG"", ""CHM""]",BSc,2,0,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.304640
+8062454d-0bfe-4e11-aef8-c9374e7d9f8c,NDB01,"[""CHM""]",BSc BEd,4,4,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304649
+a032247a-7786-4794-968c-ab12b8cc5dfa,NDB01,"[""ENG"", ""SCI""]",MSc,16,8,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304659
+3dd1ab2b-76f2-4555-b939-d72d4caa4c5e,NDB01,"[""SCI"", ""SST"", ""PHY""]",MSc,22,12,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304668
+b864ed8a-d73b-4927-9f35-a5b3fec94b8d,NDB01,"[""MATH"", ""SCI"", ""CHM""]",MSc,21,9,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304678
+9436dac6-7f57-4b14-8d1f-2e32c344c0c7,NDB01,"[""SCI"", ""BIO""]",BSc BEd,15,5,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304688
+04705565-7698-4f66-a924-f90690fffee4,NDB01,"[""MATH"", ""HIN""]",MSc BEd,12,5,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304697
+dc0a6a74-14ff-4657-ae9c-bc8cee947c6a,NDB01,"[""ENG"", ""BIO""]",MA BEd,6,0,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304706
+58e48eb8-ac43-463b-9bd8-e3dc4328ef7d,NDB01,"[""MAR"", ""CHM"", ""HIN""]",BA BEd,5,1,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304716
+ea0c5df5-2f64-4416-a9aa-d9e598a56c1c,NDB01,"[""MATH"", ""CHM""]",BSc BEd,10,10,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304728
+fa62fb0b-3f7d-4510-aba7-0449133dc7c8,NDB01,"[""HIN"", ""PHY""]",BA BEd,23,8,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304738
+c0b59ca0-9546-489f-8ab3-609b8b104c88,NDB01,"[""CHM"", ""SCI""]",BSc,8,6,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.304747
+db3f6224-a6c3-4d0f-a61e-6933859ee518,NDB01,"[""HIN"", ""MATH"", ""PHY""]",BSc,22,12,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304757
+f1869e1c-9150-4df2-96d3-dcbefdd13a84,NDB01,"[""CHM"", ""HIN"", ""PHY""]",MSc BEd,8,5,"[""mr"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.304768
+3d97ac02-4ccb-47b2-9ed9-c1895cbdda88,NDB01,"[""ENG"", ""SCI""]",MA BEd,21,1,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304777
+e8edf500-4bf2-4551-88eb-3703fed9c64b,NDB01,"[""SST"", ""ENG"", ""MATH""]",MSc BEd,10,5,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304786
+c710daf4-74b4-440c-9e6f-5790204ac033,NDB01,"[""BIO""]",BA BEd,12,8,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304795
+a5f6b50e-ddec-468d-8d25-46f2e7f6f415,NDB01,"[""CHM"", ""HIN""]",MA BEd,24,10,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304804
+2082615c-f028-4517-b25b-9cd013caf296,NDB01,"[""MAR""]",BA BEd D.Ed,22,12,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304813
+e941f4f9-40ad-4a7f-87d2-68b57bfc6f0a,NDB01,"[""SCI"", ""PHY""]",MA BEd,1,1,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.304822
+daf5aa18-d6ae-46cf-ba9c-736625c3c34f,NDB01,"[""HIN"", ""PHY"", ""CHM""]",MSc BEd,21,11,"[""mr"", ""hi"", ""gondi""]",True,,True,PENDING,2026-04-25T16:19:43.304831
+c87357b6-d8dd-475e-ab4f-295fa7e27cf6,NDB01,"[""BIO""]",BSc BEd,11,9,"[""mr"", ""hi"", ""gondi""]",True,,True,PENDING,2026-04-25T16:19:43.304839
+543a4a1c-a9e0-4884-b5df-70338731b02a,NDB01,"[""HIN"", ""PHY"", ""MATH""]",BA BEd,5,0,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304848
+c393114e-51b3-4d35-ab00-fc118daca554,NDB01,"[""SCI""]",MA BEd,8,8,"[""mr""]",True,,True,PENDING,2026-04-25T16:19:43.304856
+70bed511-1785-4fd3-9e32-6ec2d8b62ded,NDB01,"[""BIO"", ""PHY"", ""HIN""]",MSc,24,4,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304865
+7bc784a9-af85-475b-abd8-b1392ce86945,NDB01,"[""PHY"", ""HIN""]",MA BEd,2,2,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304874
+8dc08952-100d-4f8e-8cd6-28f27c475681,NDB01,"[""SST""]",MSc,4,2,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.304882
+c77c4766-72a3-4f83-a802-a1ee7c77b890,NDB01,"[""PHY""]",BA BEd D.Ed,9,3,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304891
+1119f59f-88e0-4a77-aa9a-43c6d1083e9f,NDB01,"[""MAR""]",BA BEd,21,0,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.304899
+5b5a2b28-893a-448c-8695-231bfb8ad091,NDB01,"[""MAR""]",BA BEd D.Ed,3,1,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304908
+b9e525cb-b647-4cee-bdc4-8db31547598b,NDB01,"[""ENG"", ""MATH""]",BSc,9,2,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.304916
+922e2317-ade1-437f-ab23-d1a5c4872349,NDB01,"[""SCI""]",BA BEd,22,0,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.304925
+3e8c6cbf-552e-40af-afc4-ccc844982373,NDB01,"[""SST"", ""MATH"", ""SCI""]",MA BEd,9,0,"[""mr"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.304933
+eea91f33-8699-419d-a606-aad891efa943,NDB01,"[""SCI""]",BSc,16,14,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304941
+dbf7ea23-c0ae-4425-988d-6e8609c478ab,NDB01,"[""CHM""]",BSc BEd,17,7,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304950
+e3e990d6-ca4e-440e-ada0-95f14e22af03,NDB01,"[""CHM"", ""MATH""]",MA BEd,2,1,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.304958
+316ce557-e18b-4fbe-94b3-f7e7bf22af6c,NDB01,"[""CHM"", ""SCI""]",BSc BEd,3,2,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304966
+a318fd2b-5a07-43ff-b5cc-55dfef96b7ad,NDB01,"[""BIO"", ""SST""]",MA BEd,13,9,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304975
+a537a67f-6494-462c-b1ca-4ff9b49ccdd8,NDB01,"[""PHY"", ""SCI"", ""BIO""]",MSc,23,3,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.304984
+73044068-a461-4df4-a146-d991247af004,NDB01,"[""MAR"", ""PHY"", ""BIO""]",MA BEd,8,6,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.304992
+4e4ec67f-b1ee-4c19-89f4-65020aebb49a,NDB01,"[""SCI"", ""SST""]",BA BEd,14,5,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305001
+af13b860-4c57-4147-a146-06d261451e22,NDB01,"[""CHM"", ""SCI"", ""MATH""]",MSc,3,0,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.305009
+cb34338f-9d14-40ed-883d-d4db68c2ecd8,NDB01,"[""BIO""]",BSc,2,2,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.305018
+f6185b27-66b0-4be7-9874-b835edbbefc6,NDB01,"[""SCI"", ""PHY"", ""ENG""]",MSc,22,13,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.305027
+027b3d6f-800e-4ef2-8c32-302c92df215d,NDB01,"[""HIN"", ""SST""]",MSc BEd,4,4,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.305036
+9ed47afa-5938-4352-9f34-38a879839632,NDB01,"[""SCI""]",BA BEd D.Ed,12,8,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.305045
+9f496f9f-2d87-4c9f-a6f8-c4313c314612,NDB01,"[""MAR"", ""PHY"", ""CHM""]",MSc,18,0,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.305054
+fe681e6c-7efb-41c3-9e48-43b37e5d110a,NDB01,"[""ENG""]",BA BEd,9,4,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.305062
+68f950e2-d5cc-4930-89da-6f7d4dc7ac44,NDB01,"[""ENG""]",MSc,19,12,"[""mr"", ""hi""]",True,,True,PENDING,2026-04-25T16:19:43.305070
+1be626a4-543a-4a24-b6e0-5bdf587227ac,NDB01,"[""BIO""]",BA BEd,7,6,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305078
+35b51b9d-466c-495f-aa15-4c5fa0f16a9c,NDB01,"[""HIN"", ""SST""]",MSc BEd,25,2,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305087
+325523a6-12ca-475e-878b-635bccf35100,NDB01,"[""MATH"", ""SCI"", ""ENG""]",MA BEd,15,13,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.305096
+9a00e606-62b9-49b2-b204-c8c8351acbd5,NDB01,"[""MAR"", ""SCI""]",MSc,12,6,"[""mr"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.305104
+9f8c07e2-261f-410a-a172-a56e0dda16bb,NDB01,"[""BIO"", ""HIN""]",BSc,2,0,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.305112
+ae1cef7f-0d49-4d47-b7b6-65274bac1cca,NDB01,"[""MAR""]",BA BEd D.Ed,10,3,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.305120
+f9900f03-d41b-47c9-b71a-ef6906a8e2e7,NDB01,"[""SST"", ""SCI""]",MSc BEd,1,1,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305129
+a2e85252-4127-4679-8921-36599c4f47a2,NDB01,"[""BIO"", ""MAR""]",BA BEd D.Ed,17,11,"[""mr"", ""hi""]",True,,True,PENDING,2026-04-25T16:19:43.305137
+265cf28c-7580-4723-981f-c2c6bf7e02f9,NDB01,"[""MATH"", ""CHM""]",BSc,3,2,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.305145
+35063ad0-79ea-417e-8b60-5fbebf4c20f3,NDB01,"[""PHY"", ""HIN"", ""MATH""]",MSc BEd,13,0,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305154
+a692fdae-0372-470a-8b85-afbe49a12ffa,NDB01,"[""SST"", ""SCI""]",MA BEd,14,13,"[""mr"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.305162
+c66843ae-5b77-4f7c-b5f8-58ad67597a7b,NDB01,"[""BIO"", ""SCI""]",BA BEd,13,13,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305171
+b525c10c-8896-4a52-ad67-5bac0d904f8c,NDB01,"[""ENG"", ""SCI""]",MSc BEd,17,3,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.305179
+5e32087e-6304-4ce4-883f-4077dec9e0bd,NDB01,"[""ENG"", ""MAR""]",MSc BEd,4,1,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305188
+d989193a-906c-4405-b478-d95d1e133516,NDB01,"[""SCI""]",MA BEd,6,6,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305196
+75abb68b-d346-4287-ad11-48b3761e0baf,NDB01,"[""CHM"", ""SST"", ""PHY""]",BSc BEd,21,10,"[""mr"", ""hi"", ""gondi""]",True,,True,PENDING,2026-04-25T16:19:43.305205
+cd6b8244-3e25-4984-aa40-d2ddce0ccc98,NDB01,"[""HIN"", ""BIO""]",BSc BEd,19,1,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.305213
+2746d026-73c5-4589-bb94-4d5cf6a3e5d3,NDB01,"[""CHM"", ""MATH""]",BSc BEd,2,1,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.305223
+5f56c267-5af0-47d7-a5d8-a0362ced8916,NDB01,"[""BIO"", ""PHY"", ""MAR""]",BA BEd D.Ed,19,1,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305239
+f5d64089-5ac9-489f-b741-f2817beda81f,NDB01,"[""MAR"", ""SST"", ""HIN""]",MA BEd,16,4,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.305250
+2052d964-bad1-4527-9486-5d4f4f2e1321,NDB01,"[""SCI"", ""ENG""]",MA BEd,2,0,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305260
+383eef3b-4b1d-43a7-8127-535ebfb4f2f0,NDB01,"[""ENG"", ""SST"", ""BIO""]",BA BEd,10,6,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305270
+93cd4cc2-c7d3-4d1a-93b3-54f086e053e2,NDB01,"[""SST""]",MSc,3,2,"[""mr"", ""hi"", ""gondi""]",True,,True,PENDING,2026-04-25T16:19:43.305279
+7bba98d6-041d-4d7b-a192-cdf5ea3c4448,NDB01,"[""HIN"", ""ENG""]",MSc BEd,11,1,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.305289
+568ba783-0f9d-4009-8680-1d0798802c59,NDB01,"[""PHY"", ""ENG""]",MA BEd,20,2,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.305298
+2c1655b0-5053-46c8-a2a3-283a53dd3629,NDB01,"[""BIO""]",BSc BEd,3,3,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.305307
+23fefeb5-4d43-418c-9451-8cee23613cea,NDB01,"[""ENG"", ""MAR""]",MSc BEd,11,7,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.305317
+39841772-b2f9-40ca-9749-a08d29a486c4,NDB01,"[""HIN""]",BA BEd D.Ed,4,4,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305327
+35d84af7-7c2d-4b59-9294-9bf412f09ce1,NDB01,"[""SST""]",MSc BEd,25,4,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305336
+f278021a-aa79-4441-ac9e-d00769d0aff8,NDB01,"[""ENG""]",BA BEd,24,14,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.305346
+d8b1462d-888f-48c4-8324-88ab67a9aee2,NDB01,"[""HIN"", ""CHM""]",BA BEd D.Ed,8,8,"[""mr"", ""hi"", ""gondi""]",True,,True,PENDING,2026-04-25T16:19:43.305356
+32dc79ac-b878-474d-a626-8e847612cdeb,NDB01,"[""SST""]",BA BEd,22,14,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.305365
+178f1dee-516a-430d-b06e-fee5f1fb1dc6,NDB01,"[""BIO"", ""PHY"", ""SCI""]",BSc BEd,7,2,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.305376
+95049b44-c953-477c-862e-cc2d099aeeb5,NDB01,"[""BIO"", ""SCI""]",BA BEd D.Ed,23,3,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305384
+06f82398-5f60-4cdc-9366-210206ecf164,NDB01,"[""CHM"", ""ENG""]",MSc BEd,14,1,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.305393
+68210963-41bc-4c9f-8333-a23c5e42179f,NDB01,"[""MATH"", ""PHY""]",MSc BEd,2,1,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.305401
+e5b3d81a-3a9c-42e7-bcea-61f4d88b4695,NDB01,"[""SST""]",BSc BEd,8,0,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.305410
+71db8c88-e7d5-4216-9f17-93d5be83ab29,NDB01,"[""ENG""]",MA BEd,2,1,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305418
+00d88336-2067-4497-8f68-1a0c57cf317b,NDB01,"[""CHM"", ""BIO"", ""HIN""]",MSc BEd,1,0,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.305427
+ee688a33-e50f-477c-9a71-5b7944bbbf64,NDB01,"[""BIO"", ""PHY"", ""MATH""]",BSc BEd,25,9,"[""mr"", ""hi""]",True,,True,PENDING,2026-04-25T16:19:43.305436
+daaeeb2e-fb8b-4e8d-a9a1-86a7a58671e4,NDB01,"[""PHY""]",BA BEd D.Ed,21,14,"[""mr"", ""hi"", ""gondi""]",True,,True,PENDING,2026-04-25T16:19:43.305444
+4402b17c-79ca-4dc7-a80f-effed1c7a77c,NDB01,"[""BIO"", ""MATH"", ""SST""]",BA BEd,17,7,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.305453
+54671115-70fb-4445-adce-47662e12ea7f,NDB01,"[""SST""]",MSc,8,6,"[""mr"", ""hi""]",True,,True,PENDING,2026-04-25T16:19:43.305461
+fc5534f0-8441-45ca-84d0-f16e4d993dcd,NDB01,"[""SST"", ""SCI"", ""HIN""]",MA BEd,18,0,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.305470
+05a2c0d4-abcc-45de-b200-c2d38107d49c,NDB01,"[""PHY"", ""SST"", ""ENG""]",BSc BEd,24,0,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.305479
+3cdcbc9f-afbd-4d0c-9885-53e193592f79,NDB01,"[""SCI""]",BA BEd,25,10,"[""mr"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.305487
+cab195cb-4e94-426c-92e1-8331538413d3,NDB01,"[""ENG"", ""CHM""]",BA BEd D.Ed,23,15,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305496
+c610727b-a572-4187-aca5-1fa1209daef4,NDB01,"[""CHM""]",BA BEd D.Ed,2,1,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.305504
+b6d259e8-85b3-4572-85fc-a183f7a6718b,NDB01,"[""SST""]",BA BEd D.Ed,10,8,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305512
+b7ef2273-d7a2-47bf-9a71-0cb7f070f6db,NDB01,"[""HIN"", ""MATH""]",BA BEd D.Ed,25,6,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.305520
+8f9010d1-4996-4b89-a5a2-51efb6bb618b,NDB01,"[""SST"", ""HIN"", ""MATH""]",MSc,12,6,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.305529
+e527fd3e-9c89-4681-8697-47d705da0e96,NDB01,"[""SST"", ""ENG""]",BA BEd D.Ed,16,15,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305537
+210223f2-ba05-4128-9b07-b2ecedeb0e73,NDB01,"[""SCI"", ""PHY""]",BA BEd D.Ed,3,3,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305546
+5c7bf3b5-f368-470f-94bc-163d4021fa41,NDB01,"[""HIN"", ""SST"", ""MATH""]",BA BEd,3,2,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.305555
+f5c4d559-7eba-4450-9304-29ca75de7f36,NDB01,"[""PHY"", ""ENG"", ""SST""]",MSc,15,11,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.305564
+437831d9-c770-4d25-b252-50319def09fb,NDB01,"[""PHY"", ""HIN"", ""SST""]",MA BEd,2,0,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.305573
+27a7ea0b-819c-4e5c-8a1f-fafce91c8567,NDB01,"[""ENG"", ""MATH"", ""SCI""]",BSc BEd,20,14,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.305582
+daef1572-45e6-465d-b4af-c42de00736a9,NDB01,"[""SST"", ""BIO"", ""MAR""]",MSc,19,1,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.305591
+a78d2c98-97e9-4f76-8458-42a8a4ed6f3d,NDB01,"[""SST"", ""CHM""]",BSc,25,2,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.305599
+f1a8d8ba-0662-4c89-a55e-4eb2f8b0981f,NDB01,"[""SST"", ""HIN""]",MSc BEd,8,1,"[""mr"", ""hi"", ""gondi""]",True,,True,PENDING,2026-04-25T16:19:43.305607
+e2d115e8-328e-4832-aa10-dbc2555c16c8,NDB01,"[""PHY"", ""SCI"", ""ENG""]",MSc BEd,25,8,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305616
+fb1fa95d-8aab-4c28-8709-a3f7710d21ae,NDB01,"[""CHM"", ""MAR""]",MA BEd,4,1,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305625
+22edb821-b230-4ce9-8e12-848bb9a8a8b0,NDB01,"[""CHM"", ""SCI"", ""PHY""]",MSc,22,10,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.305633
+e42bdea5-0f3e-4672-b632-e92dae711c4f,NDB01,"[""BIO"", ""HIN"", ""ENG""]",MSc,6,5,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305642
+452cfea0-09f4-4df0-af12-6911f1c46e42,NDB01,"[""BIO"", ""MAR""]",MSc BEd,4,1,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.305651
+3501be10-510b-4424-b34b-bf45c2ae1c90,NDB01,"[""SST""]",BSc,18,11,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.305942
+b01c41bf-da03-45d6-b5aa-001fc61f8587,NDB01,"[""SCI"", ""BIO"", ""ENG""]",BSc,13,11,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.305963
+0dc6aa27-aba4-4a30-b33f-bae11b0f1ccd,NDB01,"[""SCI"", ""ENG""]",MA BEd,11,10,"[""mr"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.305975
+13af0e56-4d3f-403b-98ff-f63699c42c09,NDB01,"[""ENG"", ""BIO""]",BA BEd D.Ed,25,4,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.305986
+bf8c8dec-8507-47b0-b78d-e5d113033291,NDB01,"[""BIO""]",BA BEd,5,2,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.305994
+a983ee39-6b4c-4e03-9617-2e045d7d1f56,NDB01,"[""BIO"", ""HIN""]",BSc,3,2,"[""mr""]",True,,True,PENDING,2026-04-25T16:19:43.306003
+d2532c8b-2eaf-4112-8f37-a37e15a96be7,NDB01,"[""HIN""]",MSc BEd,20,2,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.306012
+73c19a08-553d-4e5c-b5e0-304e4dd50df3,NDB01,"[""ENG"", ""BIO"", ""SST""]",BSc,20,10,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.306021
+31d0d223-d7e2-48da-8f62-914abefb2cb2,NDB01,"[""SCI""]",BA BEd,2,2,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.306029
+a66a8341-a4ba-4395-abd2-d60ab85af164,NDB01,"[""PHY"", ""MATH"", ""MAR""]",BA BEd,21,9,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.306038
+ef8a15f6-b638-4019-979a-ac6f598ada7c,NDB01,"[""PHY""]",BSc BEd,10,7,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.306047
+e0026b62-4318-4a5b-8213-526174e94cab,NDB01,"[""PHY"", ""CHM""]",MSc BEd,15,6,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.306056
+4544fdc4-73eb-4702-8b43-bb4712539925,NDB01,"[""SST"", ""BIO"", ""MAR""]",BSc BEd,5,2,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.306065
+f56ef77f-b411-44b1-9b1d-1562a3ad0b6f,NDB01,"[""CHM""]",MSc BEd,4,2,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.306073
+cf94d801-1e75-44ac-945b-aef79ef8d41d,NDB01,"[""HIN""]",MSc BEd,13,13,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.306082
+c0a1dd01-7952-477a-8878-0213bbacaa4c,NDB01,"[""SST"", ""MAR""]",BSc,25,5,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.306091
+98ab2138-c440-47bb-b5c6-73ecea90889a,NDB01,"[""HIN"", ""CHM""]",BSc,1,0,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.306100
+964ef1b4-6adb-46a5-a1d9-2f7babbc4224,NDB01,"[""MAR""]",BA BEd,19,11,"[""mr"", ""hi"", ""gondi""]",True,,True,PENDING,2026-04-25T16:19:43.306108
+b84dffbb-d4da-49e4-9c32-5571506489de,NDB01,"[""CHM"", ""HIN"", ""BIO""]",BA BEd,1,0,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.306117
+a71aac7a-134b-4557-96af-55220430eba8,NDB01,"[""SST"", ""MATH""]",MSc BEd,13,0,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.306126
+934f62de-aa0b-47ea-ab2b-0c08eb47d93a,NDB01,"[""HIN"", ""SCI"", ""MAR""]",BA BEd,17,14,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.306135
+5abfe4e7-b795-4794-94a4-aea8acd449e9,NDB01,"[""SCI"", ""ENG"", ""MATH""]",BA BEd,13,5,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.306144
+4279705d-4618-41f3-9985-44741b47f767,NDB01,"[""ENG"", ""MAR""]",BSc BEd,20,12,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.306152
+88d22486-1777-488a-9649-dfed13eff84c,NDB01,"[""SST""]",BSc,16,14,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.306161
+8a33e238-35fa-436c-bf9f-26f76e23e647,NDB01,"[""SST"", ""ENG""]",BA BEd,13,9,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.306172
+68e12b6d-37d9-485b-89f2-fd4b096b80bb,NDB01,"[""BIO"", ""CHM""]",BSc BEd,23,9,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.306180
+33ea8fed-54b0-4962-90ea-5feaf07fd558,NDB01,"[""SCI"", ""PHY""]",MSc,19,9,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.306189
+98d6e7f9-366d-48f9-9530-4b978bc43a13,NDB01,"[""CHM"", ""HIN"", ""SST""]",BSc,25,7,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.306198
+bb8240b0-93de-4648-b521-a538f3351a0e,NDB01,"[""BIO""]",MSc,21,12,"[""mr"", ""hi"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.306206
+657e68ff-836d-4e7c-8667-0ed2caa951a4,NDB01,"[""SCI""]",MA BEd,7,0,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.306215
+33be1963-8573-4f2c-b668-13e782f6e0f1,NDB01,"[""MAR"", ""PHY""]",MSc,17,15,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.306223
+43773a0e-332a-490d-964b-b04aedad4bd9,NDB01,"[""ENG"", ""MAR"", ""HIN""]",MA BEd,11,10,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.306232
+2d5c4759-a82a-4221-b486-28d67247f9ee,NDB01,"[""CHM""]",MSc,18,10,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.306241
+11220877-9090-4751-a790-476cf5240ca5,NDB01,"[""CHM"", ""MAR"", ""SCI""]",BA BEd,9,8,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.306249
+91d96ab8-0115-4666-aba6-38c9d481fc77,NDB01,"[""MAR"", ""CHM"", ""ENG""]",BA BEd D.Ed,16,11,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.306258
+b934ef06-bb79-4a28-921f-d27dc888e561,NDB01,"[""SCI"", ""PHY""]",BA BEd D.Ed,13,13,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.306267
+d1af1b3e-75d7-470c-ae6e-4e60c1e972cc,NDB01,"[""MATH"", ""HIN""]",MA BEd,23,2,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.306275
+c36cb709-7381-486c-b1a9-09d5be932009,NDB01,"[""CHM"", ""MAR"", ""SCI""]",MSc,18,8,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.306284
+b38b1e69-7f4c-4fcc-acd4-ccdf36156b21,NDB01,"[""SCI""]",MSc,20,7,"[""mr"", ""en""]",True,,True,PENDING,2026-04-25T16:19:43.306292
+f284bb17-2c00-4463-b559-ad4525ef2c0a,NDB01,"[""MAR""]",MSc,2,0,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.306301
+176c381d-64bc-41a4-b6f6-5208355d7d2a,NDB01,"[""ENG""]",MA BEd,1,0,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.306309
+376036d3-36f8-4d05-9ebc-9eed951c1d78,NDB01,"[""MAR"", ""HIN"", ""ENG""]",BA BEd D.Ed,10,10,"[""mr"", ""hi""]",True,,True,PENDING,2026-04-25T16:19:43.306319
+7a8b9f09-5862-49b6-a575-3d6ae3b195b3,NDB01,"[""MAR"", ""MATH"", ""SCI""]",BSc BEd,14,14,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.306328
+7343bd1f-4661-4001-a87f-490e9aaf0f2a,NDB01,"[""ENG"", ""HIN""]",BSc,2,0,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.306337
+dffd6a1d-8d2c-4bdf-88ad-6ba3e706645a,NDB01,"[""HIN"", ""CHM""]",MSc BEd,21,15,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.306346
+3db2aada-5a8f-4ba1-a29b-66015ec41e73,NDB01,"[""HIN"", ""MAR""]",MA BEd,4,2,"[""mr""]",True,,True,PENDING,2026-04-25T16:19:43.306354
+5d8f247b-3eef-431f-8975-9adc6bdaf21d,NDB01,"[""ENG"", ""MATH"", ""SST""]",BA BEd D.Ed,11,4,"[""mr"", ""hi"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.306375
+d8f97929-9e17-4023-958e-6e70de09f375,NDB01,"[""PHY""]",MA BEd,14,8,"[""mr"", ""hi""]",False,,True,PENDING,2026-04-25T16:19:43.306384
+e603192c-2ecb-4be3-a1d0-b0332192cf1b,NDB01,"[""ENG""]",BSc BEd,16,10,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.306394
+4cd0984e-848c-47e8-8ffa-b7684fa97272,NDB01,"[""MAR"", ""CHM""]",BA BEd,25,8,"[""mr"", ""en""]",False,,True,PENDING,2026-04-25T16:19:43.306405
+2922526f-6836-4d32-97b7-7c2dfa0fdea8,NDB01,"[""MATH"", ""HIN"", ""SST""]",MSc,12,11,"[""mr"", ""hi""]",True,,True,PENDING,2026-04-25T16:19:43.306414
+d5639e15-4b3d-480b-9f82-8de80bd0a9ad,NDB01,"[""HIN"", ""ENG""]",MSc,13,10,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.306424
+3c935441-04ad-47ae-8668-70e4882a53d9,NDB01,"[""SCI"", ""HIN"", ""ENG""]",MSc BEd,20,7,"[""mr"", ""hi"", ""gondi""]",True,,True,PENDING,2026-04-25T16:19:43.306434
+ab6a2f6c-fcbb-48bd-bba4-62e4504a384d,NDB01,"[""CHM""]",BSc,24,11,"[""mr"", ""hi"", ""gondi""]",False,,True,PENDING,2026-04-25T16:19:43.306443
+5d70d1bc-2250-4264-82c2-bad1f84f1250,NDB01,"[""MAR"", ""BIO"", ""SST""]",BSc,25,2,"[""mr""]",False,,True,PENDING,2026-04-25T16:19:43.306453

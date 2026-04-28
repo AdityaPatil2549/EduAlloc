@@ -177,6 +177,78 @@ class BigQueryClient:
         rows = [{"school_id": school_id, "di_score": di_score, "di_breakdown_json": di_breakdown}]
         await self.insert_rows("di_updates", rows)
 
+    async def save_deployment(self, deployment: dict) -> None:
+        """
+        Stream-insert a single approved deployment assignment to the deployments table.
+
+        Expected keys: deployment_id, teacher_id, school_id, vacancy_subject,
+                       dvs_score, distance_km, retention_score, status, approved_by, approved_at
+        """
+        await self.insert_rows("deployments", [deployment])
+
+    async def get_deployments(self, district_code: str, limit: int = 100) -> list[dict]:
+        """Fetch recent deployment assignments for a district."""
+        sql = f"""
+            SELECT
+                deployment_id, teacher_id, school_id, vacancy_subject,
+                dvs_score, distance_km, retention_score,
+                status, approved_by, approved_at
+            FROM {self._full_table("deployments")}
+            WHERE district_code = @district_code
+            ORDER BY approved_at DESC
+            LIMIT @limit
+        """
+        params = [
+            bigquery.ScalarQueryParameter("district_code", "STRING", district_code),
+            bigquery.ScalarQueryParameter("limit", "INT64", limit),
+        ]
+        return await self.query(sql, params)
+
+    async def get_analytics(self, district_code: str) -> dict:
+        """Fetch real aggregated analytics from BigQuery."""
+        # Top level metrics
+        sql_top = f"""
+            SELECT
+                COUNT(school_id) as total_schools,
+                AVG(di_score) as avg_di_score,
+                SUM(subject_vacancies) as total_vacancies,
+                COUNTIF(di_score >= 80) as critical_schools
+            FROM {self._full_table("schools")}
+            WHERE district_code = @district_code
+        """
+        params = [bigquery.ScalarQueryParameter("district_code", "STRING", district_code)]
+        rows_top = await self.query(sql_top, params)
+        top_metrics = rows_top[0] if rows_top else {"total_schools": 0, "avg_di_score": 0, "total_vacancies": 0, "critical_schools": 0}
+
+        # Block level metrics for charts
+        sql_blocks = f"""
+            SELECT
+                block_name,
+                COUNT(school_id) as schools_count,
+                AVG(di_score) as avg_di_score,
+                SUM(subject_vacancies) as vacancies
+            FROM {self._full_table("schools")}
+            WHERE district_code = @district_code
+            GROUP BY block_name
+            ORDER BY avg_di_score DESC
+        """
+        rows_blocks = await self.query(sql_blocks, params)
+
+        return {
+            "total_schools": top_metrics.get("total_schools", 0),
+            "avg_di_score": round(top_metrics.get("avg_di_score") or 0, 1),
+            "total_vacancies": top_metrics.get("total_vacancies", 0),
+            "critical_schools": top_metrics.get("critical_schools", 0),
+            "block_stats": [
+                {
+                    "name": r.get("block_name"),
+                    "avg_di": round(r.get("avg_di_score") or 0, 1),
+                    "vacancies": r.get("vacancies", 0),
+                    "schools": r.get("schools_count", 0)
+                } for r in rows_blocks
+            ]
+        }
+
     def close(self) -> None:
         """Shutdown thread pool cleanly."""
         self._pool.shutdown(wait=False)

@@ -1,7 +1,8 @@
-"""ReportLab PDF generator for deployment orders."""
+"""ReportLab PDF generator for deployment orders with Marathi (Devanagari) support."""
 
 from __future__ import annotations
 
+import os
 from datetime import date, timedelta
 from io import BytesIO
 
@@ -9,6 +10,8 @@ from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import cm
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (
     HRFlowable,
     Paragraph,
@@ -17,6 +20,18 @@ from reportlab.platypus import (
     Table,
     TableStyle,
 )
+
+# ── Register Devanagari font ──────────────────────────────────────────────────
+_FONT_PATH = os.path.join(os.path.dirname(__file__), "fonts", "NotoSansDevanagari-Regular.ttf")
+_DEVANAGARI_FONT = "NotoDevanagari"
+_DEVANAGARI_AVAILABLE = False
+
+if os.path.exists(_FONT_PATH):
+    try:
+        pdfmetrics.registerFont(TTFont(_DEVANAGARI_FONT, _FONT_PATH))
+        _DEVANAGARI_AVAILABLE = True
+    except Exception:
+        pass  # Fallback gracefully if font registration fails
 
 
 def generate_deployment_order_pdf(
@@ -92,15 +107,35 @@ def generate_deployment_order_pdf(
     story.append(Paragraph(narrative_text, body_style))
     story.append(Spacer(1, 0.4 * cm))
 
-    # Marathi narrative
+    # Marathi narrative — rendered with NotoSansDevanagari TTF if available
     marathi_text = narrative.get("marathi_narrative", "")
     if marathi_text:
-        story.append(HRFlowable(width="100%", thickness=1, color=colors.lightgrey))
-        story.append(Spacer(1, 0.2 * cm))
-        marathi_style = ParagraphStyle(
-            "MarathiBody", parent=body_style, fontName="Helvetica", fontSize=9
-        )
-        story.append(Paragraph(marathi_text, marathi_style))
+        story.append(HRFlowable(width="100%", thickness=1, color=colors.HexColor("#e0e0e0")))
+        story.append(Spacer(1, 0.3 * cm))
+        if _DEVANAGARI_AVAILABLE:
+            marathi_title_style = ParagraphStyle(
+                "MarathiTitle",
+                parent=sub_style,
+                fontName=_DEVANAGARI_FONT,
+                fontSize=9,
+                textColor=colors.HexColor("#1e3a5f"),
+                alignment=1,
+            )
+            marathi_body_style = ParagraphStyle(
+                "MarathiBody",
+                fontName=_DEVANAGARI_FONT,
+                fontSize=10,
+                leading=16,
+                spaceAfter=8,
+            )
+            story.append(Paragraph("मराठी अधिकृत आदेश", marathi_title_style))
+            story.append(Spacer(1, 0.2 * cm))
+            story.append(Paragraph(marathi_text, marathi_body_style))
+        else:
+            story.append(Paragraph(
+                "<i>(A Marathi translation of this order is available on the EduAllocPro digital dashboard)</i>",
+                sub_style,
+            ))
         story.append(Spacer(1, 0.4 * cm))
 
     # Signature block

@@ -14,9 +14,14 @@ export function useDeployment() {
   const [optimizing, setOptimizing] = useState(false)
   const [optimizeError, setOptimizeError] = useState(null)
 
+  // approval state: { [teacher_id]: { status: 'APPROVED'|'APPROVED_LOCAL'|'REJECTED', deployment_id } }
+  const [approvals, setApprovals] = useState({})
+  const [approving, setApproving] = useState({})
+
   const fetchMatches = useCallback(async (schoolId, subject, districtId = 'NDB01') => {
     setMatchLoading(true)
     setMatchError(null)
+    setApprovals({})  // clear previous approvals on new search
     try {
       const { data } = await api.get('/api/deploy/matches', {
         params: { school_id: schoolId, subject, district_id: districtId },
@@ -28,6 +33,41 @@ export function useDeployment() {
     } finally {
       setMatchLoading(false)
     }
+  }, [])
+
+  const approveMatch = useCallback(async (match) => {
+    const tid = match.teacher_id
+    setApproving(prev => ({ ...prev, [tid]: true }))
+    try {
+      const { data } = await api.post('/api/deploy/approve', {
+        teacher_id: tid,
+        school_id: match.school_id,
+        vacancy_subject: match.vacancy_subject,
+        dvs_score: match.dvs?.dvs ?? 0,
+        distance_km: match.distance_km,
+        retention_score: match.retention_score,
+        district_code: 'NDB01',
+        approved_by: 'officer',
+      }, { headers: DEV_HEADERS })
+      setApprovals(prev => ({ ...prev, [tid]: { status: data.status, deployment_id: data.deployment_id, message: data.message } }))
+    } catch (err) {
+      // Still mark locally approved so UI doesn't get stuck
+      setApprovals(prev => ({ ...prev, [tid]: { status: 'APPROVED_LOCAL', deployment_id: null, message: err.message } }))
+    } finally {
+      setApproving(prev => ({ ...prev, [tid]: false }))
+    }
+  }, [])
+
+  const rejectMatch = useCallback((teacherId) => {
+    setApprovals(prev => ({ ...prev, [teacherId]: { status: 'REJECTED', deployment_id: null, message: null } }))
+  }, [])
+
+  const undoDecision = useCallback((teacherId) => {
+    setApprovals(prev => {
+      const next = { ...prev }
+      delete next[teacherId]
+      return next
+    })
   }, [])
 
   const runOptimizer = useCallback(async (districtCode = 'NDB01') => {
@@ -48,6 +88,8 @@ export function useDeployment() {
 
   return {
     matches, matchLoading, matchError, fetchMatches,
+    approvals, approving, approveMatch, rejectMatch, undoDecision,
     optimizeResult, optimizing, optimizeError, runOptimizer,
   }
 }
+

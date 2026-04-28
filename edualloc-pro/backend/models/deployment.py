@@ -29,6 +29,12 @@ class TeacherMatch(BaseModel):
     dvs: DVScore
     distance_km: Optional[float] = None
     rank: int = Field(..., ge=1, le=5)
+    # Display fields for the frontend card
+    teacher_name: Optional[str] = None
+    qualification: Optional[str] = None
+    years_experience: Optional[int] = None
+    long_dist_consent: Optional[bool] = None
+    retention_score: Optional[float] = None  # 0-100
 
 
 class MatchListResponse(BaseModel):

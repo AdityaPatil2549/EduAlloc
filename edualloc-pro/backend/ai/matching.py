@@ -12,7 +12,7 @@ Hard constraints enforced here:
 from __future__ import annotations
 
 import math
-from typing import Optional
+from typing import Optional, Any
 
 import structlog
 
@@ -67,6 +67,7 @@ async def get_top_matches(
     bq: BigQueryClient,
     vertex: VertexClient,
     cache: EmbeddingsCache,
+    maps: Any = None,
     top_n: int = 5,
 ) -> list[dict]:
     """
@@ -104,9 +105,32 @@ async def get_top_matches(
 
     di_score = school.get("di_score", 0) or 0
 
-    # Step 3 & 4: Embed teachers, apply constraints, score
-    candidates = []
+    # Step 3: Batch compute commute distances using ORS MapsClient
+    school_lat = school.get("lat")
+    school_lng = school.get("lng")
+    destination = (school_lat, school_lng) if school_lat and school_lng else None
+
+    origins = []
     for teacher in teachers:
+        t_lat = teacher.get("lat")
+        t_lng = teacher.get("lng")
+        if t_lat is None or t_lng is None:
+            if destination:
+                # Mock a 5-10km offset for demo if teacher has no location
+                t_lat = destination[0] + 0.05
+                t_lng = destination[1] + 0.05
+            else:
+                t_lat, t_lng = 21.3661, 74.2167
+        origins.append((t_lat, t_lng))
+
+    distances_km = []
+    durations_min = []
+    if destination and origins and maps:
+        distances_km, durations_min = await maps.distance_matrix(origins=origins, destination=destination)
+
+    # Step 4: Embed teachers, apply constraints, score
+    candidates = []
+    for dist_idx, teacher in enumerate(teachers):
         teacher_id = teacher["teacher_id"]
 
         # ALWAYS check cache first — never re-embed same teacher
@@ -122,12 +146,8 @@ async def get_top_matches(
                 continue
 
         # ── Hard commute constraint — 80km unless consent ─────────────
-        distance_km: Optional[float] = None
-        school_lat = school.get("lat")
-        school_lng = school.get("lng")
-        if school_lat and school_lng:
-            # Approximate distance (haversine) — exact Maps distance is pre-cached in prod
-            distance_km = _haversine(school_lat, school_lng, school_lat, school_lng)
+        distance_km = distances_km[dist_idx] if dist_idx < len(distances_km) else None
+        commute_minutes = int(durations_min[dist_idx]) if dist_idx < len(durations_min) else None
 
         if distance_km and distance_km > MAX_COMMUTE_KM and not teacher.get("long_dist_consent"):
             bound_log.info(

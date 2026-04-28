@@ -1,13 +1,30 @@
-"""Geocoding utilities using Google Maps API."""
+"""Geocoding utilities using Nominatim (OpenStreetMap)."""
 
 import asyncio
-from typing import Dict, List, Optional
+from typing import Dict, List
 import structlog
+from geopy.geocoders import Nominatim
+from geopy.extra.rate_limiter import RateLimiter
 
 log = structlog.get_logger()
 
+# Initialize Nominatim and RateLimiter
+geolocator = Nominatim(user_agent="edualloc-pro-hackathon-2026")
+# Rate limit: 1 request/second (Nominatim's free policy)
+_geocode_sync = RateLimiter(geolocator.geocode, min_delay_seconds=1.1)
+
+def _do_geocode(address: str) -> tuple[float | None, float | None, str]:
+    try:
+        location = _geocode_sync(address)
+        if location:
+            return location.latitude, location.longitude, 'OK'
+        return None, None, 'ZERO_RESULTS'
+    except Exception as e:
+        log.error("geocode.single.error", address=address, error=str(e))
+        return None, None, 'ERROR'
+
 async def batch_geocode(
-    maps_client, 
+    maps_client, # Ignored, kept for API compatibility
     schools: List[Dict], 
     district_name: str = "Nandurbar", 
     state_name: str = "Maharashtra"
@@ -19,7 +36,6 @@ async def batch_geocode(
     """
     log.info("geocode.batch.start", count=len(schools))
     
-    tasks = []
     for school in schools:
         if school.get('lat') and school.get('lng'):
             continue # Already geocoded
@@ -34,26 +50,17 @@ async def batch_geocode(
             "India"
         ]
         address = ", ".join([p for p in parts if p])
-        tasks.append(_geocode_single(maps_client, school, address))
         
-    if tasks:
-        # Batch execution (maps_client should handle rate limits internally, 
-        # but we use gather for concurrent requests)
-        await asyncio.gather(*tasks)
+        # Nominatim must be called sequentially with rate limiting
+        # Use run_in_executor to not block the event loop
+        loop = asyncio.get_event_loop()
+        lat, lng, status = await loop.run_in_executor(None, _do_geocode, address)
+        
+        if lat and lng:
+            school['lat'] = lat
+            school['lng'] = lng
+        school['geocode_status'] = status
         
     success = sum(1 for s in schools if s.get('geocode_status') == 'OK')
     log.info("geocode.batch.done", total=len(schools), success=success)
     return schools
-
-async def _geocode_single(maps_client, school: Dict, address: str) -> None:
-    try:
-        result = await maps_client.geocode(address)
-        if result and result.get('lat') and result.get('lng'):
-            school['lat'] = result['lat']
-            school['lng'] = result['lng']
-            school['geocode_status'] = 'OK'
-        else:
-            school['geocode_status'] = 'ZERO_RESULTS'
-    except Exception as e:
-        log.error("geocode.single.error", school_id=school.get('school_id'), error=str(e))
-        school['geocode_status'] = 'ERROR'
