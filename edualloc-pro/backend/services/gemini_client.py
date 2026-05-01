@@ -32,12 +32,20 @@ class GeminiClient:
         temperature_briefing: float = 0.3,
         temperature_order: float = 0.6,
     ) -> None:
-        self._client = genai.Client(api_key=api_key)
         self._model_name = model
         self._temp_briefing = temperature_briefing
         self._temp_order = temperature_order
         self._pool = ThreadPoolExecutor(max_workers=2, thread_name_prefix="gemini")
-        log.info("gemini.client.init", model=model)
+        
+        try:
+            if not api_key:
+                raise ValueError("Empty API Key")
+            self._client = genai.Client(api_key=api_key)
+            log.info("gemini.client.init", model=model)
+        except Exception as e:
+            log.error("gemini.init.failed", error=str(e))
+            self._client = None
+            log.warning("gemini.client.unavailable", reason="missing_or_invalid_api_key")
 
     async def _run(self, fn, *args) -> Any:
         loop = asyncio.get_event_loop()
@@ -69,6 +77,8 @@ class GeminiClient:
         )
 
         def _call():
+            if self._client is None:
+                raise GeminiError("Gemini client not initialized")
             response = self._client.models.generate_content(
                 model=self._model_name,
                 contents=prompt,
