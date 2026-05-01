@@ -96,7 +96,10 @@ def create_app() -> FastAPI:
     )
 
     # ── CORS ─────────────────────────────────────────────────────────────────
-    origins = os.getenv("CORS_ORIGINS", "http://localhost:5173").split(",")
+    env_origins = os.getenv("CORS_ORIGINS", "http://localhost:5177").split(",")
+    # Force add Vercel URL for Hackathon demo resilience
+    origins = list(set(env_origins + ["https://edu-alloc-five.vercel.app"]))
+    
     app.add_middleware(
         CORSMiddleware,
         allow_origins=origins,

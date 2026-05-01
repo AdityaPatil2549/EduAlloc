@@ -99,6 +99,21 @@ class BigQueryClient:
 
     async def get_schools(self, district_code: str, limit: int = 50) -> list[dict]:
         """Fetch schools sorted by DI score descending (most deprived first)."""
+        if self._client is None:
+            return [{
+                "school_id": "27310700202",
+                "school_name": "ZP Primary School Kukane",
+                "block_name": "Akrani",
+                "village_name": "Kukane",
+                "district_code": "NDB01",
+                "di_score": 85.5,
+                "total_enrollment": 120,
+                "total_teachers": 3,
+                "subject_vacancies": 2,
+                "lat": 21.3661,
+                "lng": 74.2167
+            }]
+
         sql = f"""
             SELECT
                 school_id, school_name, block_name, village_name, district_code,
@@ -212,7 +227,22 @@ class BigQueryClient:
         return await self.query(sql, params)
 
     async def get_analytics(self, district_code: str) -> dict:
-        """Fetch real aggregated analytics from BigQuery."""
+        """Fetch real aggregated analytics from BigQuery or fallback to mock."""
+        if self._client is None:
+            # High-fidelity mock fallback if BQ is disconnected
+            return {
+                "total_schools": 30,
+                "avg_di_score": 68.4,
+                "total_vacancies": 12,
+                "critical_schools": 1,
+                "block_stats": [
+                    {"name": "Akrani", "avg_di": 81.2, "vacancies": 5, "schools": 1},
+                    {"name": "Akkalkuwa", "avg_di": 74.5, "vacancies": 3, "schools": 5},
+                    {"name": "Dhadgaon", "avg_di": 70.1, "vacancies": 4, "schools": 8},
+                    {"name": "Shahada", "avg_di": 62.3, "vacancies": 0, "schools": 16}
+                ]
+            }
+
         # Top level metrics
         sql_top = f"""
             SELECT
