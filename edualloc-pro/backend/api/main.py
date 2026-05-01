@@ -39,12 +39,12 @@ async def lifespan(app: FastAPI):
     """Initialize all shared clients on startup, clean up on shutdown."""
     log.info("app.startup.begin")
 
-    project_id = os.environ["GOOGLE_CLOUD_PROJECT"]
+    project_id = os.getenv("GOOGLE_CLOUD_PROJECT", "edu-alloc")
     bq_dataset = os.getenv("BQ_DATASET", "edualloc_dataset")
     bq_location = os.getenv("BQ_LOCATION", "us-central1")
     vertex_location = os.getenv("VERTEX_AI_LOCATION", "us-central1")
-    gemini_key = os.environ["GOOGLE_API_KEY"]
-    gemini_model = os.getenv("GEMINI_MODEL", "gemini-1.5-pro-latest")
+    gemini_key = os.getenv("GOOGLE_API_KEY", "")
+    gemini_model = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
     cache_ttl = float(os.getenv("EMBEDDINGS_CACHE_TTL_HOURS", "24"))
     cache_max = int(os.getenv("EMBEDDINGS_CACHE_MAX_SIZE", "10000"))
 

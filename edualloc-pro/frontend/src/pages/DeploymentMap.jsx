@@ -90,6 +90,28 @@ export default function DeploymentMap() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
           />
 
+          {/* Base Layer: All Schools */}
+          {schools.filter(s => s.lat && s.lng).map(school => (
+            <CircleMarker
+              key={`base-${school.school_id}`}
+              center={[school.lat, school.lng]}
+              radius={4}
+              pathOptions={{
+                color: 'transparent',
+                fillColor: '#cbd5e1', // slate-300
+                fillOpacity: 0.6,
+              }}
+            >
+              <Popup className="premium-popup">
+                <div className="p-2 min-w-[200px]">
+                  <strong className="text-sm font-bold text-slate-900 block truncate">{school.school_name}</strong>
+                  <div className="text-[10px] font-bold text-slate-500 uppercase mt-1">No recent deployments</div>
+                </div>
+              </Popup>
+            </CircleMarker>
+          ))}
+
+          {/* Overlay: Deployment Markers */}
           {deploymentMarkers.map(dep => {
             // Color code based on DVS score for deployments
             const dvs = dep.dvs_score * 100

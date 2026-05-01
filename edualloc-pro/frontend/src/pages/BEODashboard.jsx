@@ -11,7 +11,7 @@ export default function BEODashboard() {
   const districtId = import.meta.env.VITE_DEFAULT_DISTRICT_ID || 'NDB01'
   const { schools, loading, error, refetch } = useSchools(districtId, 100)
   const [filterBlock, setFilterBlock] = useState('All')
-  const [filterLevel, setFilterLevel] = useState('critical') // critical | high | all
+  const [filterLevel, setFilterLevel] = useState('all') // critical | high | all
 
   // Derive block list from real data
   const blocks = ['All', ...new Set(schools.map(s => s.block_name).filter(Boolean))]

@@ -128,22 +128,36 @@ async def get_top_matches(
     if destination and origins and maps:
         distances_km, durations_min = await maps.distance_matrix(origins=origins, destination=destination)
 
-    # Step 4: Embed teachers, apply constraints, score
+    # Step 4: Batch missing teacher embeddings
+    missing_teachers = []
+    missing_texts = []
+    for teacher in teachers:
+        if cache.get(teacher["teacher_id"]) is None:
+            missing_teachers.append(teacher)
+            missing_texts.append(_build_teacher_embedding_str(teacher))
+            
+    if missing_texts:
+        # Vertex API limit is 250 strings per request, we batch in 200s
+        batch_size = 200
+        for i in range(0, len(missing_texts), batch_size):
+            batch_texts = missing_texts[i:i+batch_size]
+            batch_teachers = missing_teachers[i:i+batch_size]
+            try:
+                batch_vecs = await vertex.embed(batch_texts)
+                for t, vec in zip(batch_teachers, batch_vecs):
+                    cache.set(t["teacher_id"], vec)
+            except VertexError as e:
+                bound_log.warning("matching.batch_embed_error", error=str(e))
+
+    # Step 5: Apply constraints and score
     candidates = []
     for dist_idx, teacher in enumerate(teachers):
         teacher_id = teacher["teacher_id"]
 
-        # ALWAYS check cache first — never re-embed same teacher
+        # Cache should now have the vector
         vec = cache.get(teacher_id)
         if vec is None:
-            teacher_str = _build_teacher_embedding_str(teacher)
-            try:
-                vecs = await vertex.embed([teacher_str])
-                vec = vecs[0]
-                cache.set(teacher_id, vec)
-            except VertexError as e:
-                bound_log.warning("matching.teacher_embed_skip", teacher_id=teacher_id, error=str(e))
-                continue
+            continue
 
         # ── Hard commute constraint — 80km unless consent ─────────────
         distance_km = distances_km[dist_idx] if dist_idx < len(distances_km) else None
