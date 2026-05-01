@@ -27,9 +27,16 @@ class BigQueryClient:
         self._project = project_id
         self._dataset = dataset
         self._location = location
-        self._client = bigquery.Client(project=project_id)
         self._pool = ThreadPoolExecutor(max_workers=4, thread_name_prefix="bq")
-        log.info("bq.client.init", project=project_id, dataset=dataset)
+        
+        try:
+            self._client = bigquery.Client(project=project_id)
+            log.info("bq.client.init", project=project_id, dataset=dataset)
+        except Exception as e:
+            log.error("bq.init.failed", error=str(e))
+            # Fallback to allow server boot even if BQ fails (e.g. invalid creds in Render)
+            self._client = None
+            log.warning("bq.client.unavailable", reason="invalid_credentials_or_config")
 
     async def _run(self, fn, *args) -> Any:
         """Run a synchronous BQ call in the thread pool — never blocks the event loop."""

@@ -28,12 +28,17 @@ class VertexClient:
 
     def __init__(self, project_id: str, location: str = "us-central1") -> None:
         import vertexai
-        vertexai.init(project=project_id, location=location)
+        try:
+            vertexai.init(project=project_id, location=location)
+            log.info("vertex.client.init", model=VERTEX_EMBEDDING_MODEL, location=location)
+        except Exception as e:
+            log.error("vertex.init.failed", error=str(e))
+            log.warning("vertex.client.unavailable", reason="invalid_credentials_or_config")
+
         self._project = project_id
         self._location = location
         self._model = None  # Lazy init — loaded on first embed() call
         self._pool = ThreadPoolExecutor(max_workers=2, thread_name_prefix="vertex")
-        log.info("vertex.client.init", model=VERTEX_EMBEDDING_MODEL, location=location)
 
     def _get_model(self):
         """Lazy-load the embedding model on first use."""
