@@ -133,6 +133,35 @@ class BigQueryClient:
 
     async def get_school_detail(self, school_id: str) -> dict | None:
         """Fetch full school detail including DI breakdown."""
+        if self._client is None:
+            return {
+                "school_id": "27310700202",
+                "school_name": "ZP Primary School Kukane",
+                "block_name": "Akrani",
+                "village_name": "Kukane",
+                "district_code": "NDB01",
+                "di_score": 85.5,
+                "di_category": "Critical",
+                "di_breakdown_json": '{"vacancy_weight": 40, "infrastructure_weight": 20, "distance_weight": 25.5}',
+                "total_enrollment": 120,
+                "prev_year_enrollment": 110,
+                "total_teachers": 3,
+                "subject_vacancies": 2,
+                "has_toilet": True,
+                "has_electricity": False,
+                "total_classrooms": 4,
+                "total_classes": 5,
+                "urban_distance_km": 45.2,
+                "aser_proxy_score": 32.5,
+                "school_category": "Primary",
+                "medium_of_instruction": "Marathi",
+                "lat": 21.3661,
+                "lng": 74.2167,
+                "is_data_stale": False,
+                "geocode_status": "SUCCESS",
+                "updated_at": "2026-04-01T00:00:00Z"
+            }
+
         sql = f"""
             SELECT
                 school_id, school_name, block_name, village_name, district_code,
@@ -167,6 +196,19 @@ class BigQueryClient:
 
     async def get_teachers_by_subject(self, district_code: str, subject: str) -> list[dict]:
         """Pre-filter teachers by subject vacancy before embedding comparison."""
+        if self._client is None:
+            return [{
+                "teacher_id": "T-MOCK-999",
+                "district_code": "NDB01",
+                "subject_specialization": '["Math", "Science"]',
+                "qualification": "B.Ed",
+                "years_service": 8,
+                "years_rural": 3,
+                "languages": '["Marathi", "English"]',
+                "long_dist_consent": True,
+                "current_school_id": "27310000000"
+            }]
+
         sql = f"""
             SELECT
                 teacher_id, district_code, subject_specialization,
@@ -210,6 +252,20 @@ class BigQueryClient:
 
     async def get_deployments(self, district_code: str, limit: int = 100) -> list[dict]:
         """Fetch recent deployment assignments for a district."""
+        if self._client is None:
+            return [{
+                "deployment_id": "DEP-MOCK-123",
+                "teacher_id": "T-MOCK-999",
+                "school_id": "27310700202",
+                "vacancy_subject": "Math",
+                "dvs_score": 88.5,
+                "distance_km": 12.4,
+                "retention_score": 75.0,
+                "status": "APPROVED",
+                "approved_by": "officer@edugov.in",
+                "approved_at": "2026-05-01T10:00:00Z"
+            }]
+
         sql = f"""
             SELECT
                 deployment_id, teacher_id, school_id, vacancy_subject,
